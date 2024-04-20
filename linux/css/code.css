@@ -1,0 +1,33 @@
+/* Code Box - From LL Forums */
+
+code.bbc_code
+{
+   display: block;
+   font-family: "dejavu sans mono", "monaco", "lucida console", "courier new", monospace;
+   font-size: small;
+   background: #ADD;
+   border-top: 2px solid #999;
+   border-bottom: 2px solid #999;
+   line-height: 1.5em;
+   padding: 2px 1em;
+   overflow: auto;
+   white-space: nowrap;
+   /* Show a scrollbar after about 24 lines. */
+   max-height: 24em;
+}
+
+/* The "Quote:" and "Code:" header parts... */
+.codeheader, .quoteheader
+{
+   color: #666;
+   font-size: medium;
+   font-weight: bold;
+   padding: 0 0.3em;
+}
+
+/* For links to change the code stuff... */
+.codeoperation
+{
+   font-weight: normal;
+}
+

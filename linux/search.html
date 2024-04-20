@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Help Manual - Search Results</title>
+<meta name="description" content="Description to go here." />
+
+<!-- jQuery-->
+<script src="js/jquery.min.js"></script>
+
+<!-- Custom Theme files -->
+
+<!--theme-style-->
+
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/code.css" rel="stylesheet" type="text/css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- Search Results CSS -->
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/tipuesearch.css">
+
+<meta name="keywords" content="" />
+
+<!--fonts-->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+
+<style>
+b    {font-weight: 400;}
+ </style>
+<style>
+i    {font-style: italic;}
+ </style>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+<style>.highlight { background: #FFFF40; }</style>
+
+<script type="text/javascript" src="js/highlight.js"></script>
+
+</head>
+
+<body onload="highlight();">
+	<div class="header">
+		<div class="header-left header-left1">
+			<div class="logo">
+				<center><a href="index.html"><img src="images/logo.png" alt=""></a></center>
+			</div>
+			<div class="top-nav">
+
+				<ul >
+					<li  ><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black1" > GLOSSARY</a></li>
+				</ul>
+			</div>
+
+			<ul class="social-in">
+				<li><a href="https://www.facebook.com/linuxliteos" target="_blank"><i class="facebook"> </i></a></li>
+				<li><a href="https://twitter.com/linuxlite" target="_blank"><i class="twitter"> </i></a></li>
+				<li><a href="https://www.reddit.com/r/LinuxLite/" target="_blank"><i class="reddit"> </i></a></li>
+			</ul>
+		</div>
+
+		<!---->
+
+		<div class="header-top">
+			<div class="logo-in">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+
+			<div class="top-nav-in">
+
+			<span class="menu"><img src="images/menu.png" alt=""> </span>
+
+				<ul >
+					<li  ><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li class="active"><a href="glossary.html" class="black1" > GLOSSARY</a></li>
+				</ul>
+
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav-in ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+
+			</div>
+
+			<div class="clear"> </div>
+
+		</div>
+
+			<!---->
+
+		<div class="content">
+			<div class="about">
+				<div class="about-top">
+					<div class="grid-about">
+					</div>
+
+			<!-- Offline Search feature - Start -->
+            				
+					<div class="block" style="padding-top: 39px;">
+
+					<form id="tipue_search" action="search.html">
+					<input type="text" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search terms" required>
+					<input type="image" id="search" name="" src="images/search.png" class="tipue_button search" alt="Search"><br><br>
+
+					<label for="tipue_per_page">Results per page:</label>
+					<select name="per_page" id="tipue_per_page">
+					<option value="7">7</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					</select><br><br>
+					<fieldset style="border:none;">
+					<legend style="display:inline;">Match:</legend><br>
+					<input type="radio" name="matchtype" id="any" value="0" checked="checked"><label for="any"> any search terms</label> &nbsp; <input type="radio" name="matchtype" id="all" value="1"><label for="all"> all search terms</label><br><br>
+					<p>TIP: For optimal results, only search for one or two words eg. <i>printer</i> instead of <i>how do I install a printer</i></p><br>
+					</fieldset>
+					</form></div>
+
+					<div id="tipue_search_content"><div class="tipue_search_rect1"></div><div class="tipue_search_rect2"></div><div class="rect3"></div></div>
+					
+			<!-- Offline Search feature - End -->
+
+				</div>
+
+				<div class="clear"> </div>
+
+			</div>
+
+		</div>
+
+		<div class="clear"> </div>
+
+	</div>
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/tipuesearch_set.js"></script>
+<script type="text/javascript" src="js/tipuesearch_content.js"></script>
+<script type="text/javascript" src="js/tipuesearch.js"></script>
+<script>
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        'show': parseInt(tipue_per_page),
+        'minimumLength': 2,
+        'highlightEveryTerm': true,
+        'descriptiveWords':25,
+        'listtype':'numeric',
+        'maxindex':10,
+        'debug':true,
+        'showDuration':true,
+        'allterms':tipue_match_type
+    });
+});
+</script>
+
+</body>
+
+</html>

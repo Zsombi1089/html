@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Help Manual - Hardware</title>
+<meta name="description" content="Description to go here." />
+<!-- jQuery-->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/code.css" rel="stylesheet" type="text/css" media="all" />
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<!--fonts-->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<style>
+b    {font-weight: 400;}
+</style>
+<style>
+i    {font-style: italic;}
+</style>
+
+<style>.highlight { background: #FFFF40; }</style>
+<script type="text/javascript" src="js/highlight.js"></script>
+
+</head>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+<body onload="highlight();">
+	<div class="header">
+		<div class="header-left header-left1">
+			<div class="logo">
+				<center><a href="index.html"><img src="images/logo.png" alt=""></a></center>
+			</div>
+			<div class="top-nav">
+				<ul >
+					<li><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li class="active"><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+			</div>
+			<ul class="social-in">
+				<li><a href="https://www.facebook.com/linuxliteos" target="_blank"><i class="facebook"> </i></a></li>
+				<li><a href="https://twitter.com/linuxlite" target="_blank"><i class="twitter"> </i></a></li>
+				<li><a href="https://www.reddit.com/r/LinuxLite/" target="_blank"><i class="reddit"> </i></a></li>
+			</ul>
+		</div>
+		<!---->
+		<div class="header-top">
+			<div class="logo-in">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="top-nav-in">
+			<span class="menu"><img src="images/menu.png" alt=""> </span>
+				<ul >
+					<li><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li class="active"><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav-in ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+
+			</div>
+			<div class="clear"> </div>
+		</div>
+			<!---->
+		<div class="content">
+			<div class="about">
+				<div class="about-top">
+					<div class="grid-about">
+					</div>
+
+            				<p><a href="#bluetooth">Bluetooth - Enabling full support</a><br />
+            				<a href="#booting">Booting Issues</a><br />
+            				<a href="#install-multi-drive">Dual Boot - Multiple Drives</a><br />
+            				<a href="#dualboot">Dual Boot - Modification/Repair</a><br />
+            				<a href="#dualmonitors">Dual Monitor Setup Instructions</a><br />
+            				<a href="#findhelpon">Finding help online</a><br />
+            				<a href="#graphics">Graphics Drivers and Setup</a><br />
+            				<a href="#radeon">Graphics - AMD Radeon</a><br />
+            				<a href="#nvidia">Graphics - NVIDIA</a><br />
+            				<a href="#optimus">Graphics - NVIDIA Prime</a><br />
+					<a href="#hwdb">Hardware Database</a><br />
+            				<a href="#hpprinters">HP Printers on Linux Lite</a><br />
+            				<a href="#installissues">Installation Issues</a><br />
+            				<a href="#keyboard">Keyboard Related</a><br />
+            				<a href="#sysreport">Lite System Report tool</a><br />
+            				<a href="#printer">Printer Setup</a><br />
+            				<a href="#ressound">Resources for Audio Drivers</a><br />
+            				<a href="#rescomprint">Resources for compatible Printers</a><br />
+            				<a href="#sound">Sound Configuration</a><br />
+            				<a href="#shareprinter">Share your Printer from Linux Lite</a><br />
+            				<a href="#volumetog">Volume Toggles</a></p>
+            				
+			<!-- Offline Search feature - Start -->            				
+            				
+					<div class="block" style="padding-top: 39px;">
+
+					<form id="tipue_search" action="search.html">
+					<input type="text" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search terms" required>
+					<input type="image" id="search" name="" src="images/search.png" class="tipue_button search" alt="Search"><br><br>
+
+					<label for="tipue_per_page">Results per page:</label>
+					<select name="per_page" id="tipue_per_page">
+					<option value="7">7</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					</select><br><br>
+					<fieldset style="border:none;">
+					<legend style="display:inline;">Match:</legend><br>
+					<input type="radio" name="matchtype" id="any" value="0" checked="checked"><label for="any"> any search terms</label> &nbsp; <input type="radio" name="matchtype" id="all" value="1"><label for="all"> all search terms</label><br><br>
+					<p>TIP: For optimal results, only search for one or two words eg. <i>printer</i> instead of <i>how do I install a printer</i></p><br>
+					</fieldset>
+					</form></div>
+
+					<div id="tipue_search_content"><div class="tipue_search_rect1"></div><div class="tipue_search_rect2"></div><div class="rect3"></div></div>
+					
+			<!-- Offline Search feature - End -->            				
+
+                			<h2><a name="hwdb">Hardware Database</a></h2>
+					<p>Wondering if your laptop or desktop will work on Linux Lite?<br />
+					Check out our Hardware Database <a href="https://www.linuxliteos.com/hardware.php" target="_blank">here</a> to see if your model is already listed. Don't forget
+					you can also run Linux Lite live before you install it to see if your hardware is supported. This database feature is new so the
+					list of computers at the moment is limited. If you already have Linux Lite installed, please consider adding your hardware to
+					the <a href="https://www.linuxliteos.com/hardware.php" target="_blank">Linux Lite Hardware Database</a> to help others.</p>
+
+                			<h2><a name="graphics">Graphics Drivers and Setup</a></h2>
+					<p><b><a name="legacycurrent"></a>Legacy Binary Drivers and Proprietary Binary Drivers</b></p>
+					<p><b>Legacy binary driver</b> - a driver for older video cards no longer supported by the current driver.<br />
+					<b>Proprietary binary driver</b> - a driver for newer video cards.</p>
+
+					<p>If you're not sure whether your video chipset/card needs a legacy binary driver or a proprietary binary driver, please select from the following
+					links for <b>nVidia</b> and <b>AMD</b>:</p>
+					<p><a href="http://www.nvidia.com/object/IO_32667.html" target="_blank">nVidia Legacy information</a>  - If your card is listed here, you can either use the
+					pre-installed video driver for Linux Lite or you can try the legacy driver. Linux Lite recommends you stick with the pre-installed video driver as it is the most reliable, and the
+					safest choice.</p>
+					<p><a href="https://help.ubuntu.com/community/BinaryDriverHowto/AMD" target="_blank">AMD Legacy information</a> - Linux Lite recommends you stick with the pre-installed 
+					video driver as it is the most reliable, and the safest choice.</p>
+
+                			<h2><a name="radeon">Graphics - AMD Radeon</a></h2>
+					<p><img src="images/hardware/radeon/radeon-logo.png"></p>
+
+					<p><b>NOTE: The newest Linux Lite is based on Ubuntu 22.04 'Jammy' and therefore cannot provide the AMDGPU proprietary drivers. This is something that is out of our control. If you want to use the AMDGPU proprietary drivers, 
+					there are advanced tutorials available online. Please note that we cannot provide support for the AMDGPU proprietary drivers.</p>
+
+					<p>If you have an AMD graphics card, there is no need to install any graphics drivers in the Linux Lite Series, 5x, 6x. The open source drivers are already pre-installed. 
+					The following AMDGPU products are supported via a collection of pre-installed open source drivers in Linux Lite:</p>
+
+					<p>R100, RV100, RS100, RV200, RS200, 
+					RS250, R200, RV250, RV280, RS300, RS350, RS400/RS480, R300, R350, R360, 
+					RV350, RV360, RV370, RV380, RV410, R420, R423/R430, R480/R481, 
+					RV505/RV515/RV516/RV550, R520, RV530/RV560, RV570/R580, 
+					RS600/RS690/RS740, R600, RV610/RV630, RV620/RV635, RV670, RS780/RS880, 
+					RV710/RV730, RV740/RV770/RV790, CEDAR, REDWOOD, JUNIPER, CYPRESS, 
+					HEMLOCK, PALM, SUMO/SUMO2, BARTS, TURKS, CAICOS, CAYMAN, ARUBA, TAHITI, 
+					PITCAIRN, VERDE, OLAND, HAINAN, BONAIRE, KABINI, MULLINS, KAVERI, HAWAII.</b></p>
+
+					<p>As well as many legacy (older) ATI/AMD video cards including, but not limited to:</p>
+					<p><b>ATI Rage 'r128' series, ATI Mach64 series and legacy AMD/ATI Mach64, Rage128, Radeon, FireGL, FireMV, FirePro, FireStream video cards</b>.</p>
+
+<!-- NO support for ATI Catalyst drivers in Linux Lite 4.x Series
+
+					<p>If you&#39;re not sure whether or not you have ATI graphics, open up a terminal and run this command:</p>
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo lshw -C display</code></pre><br>
+					<p><img src="images/hardware/radeon/radeon1.png"></p>
+
+					<p>You can see that under product: there is a reference to <b>Radeon</b>, a brand of <b>ATI</b>.</p>
+					<p><b>NOTE: You must be connected to the internet before you start the driver install.</b></p>
+					<p>The next step is to go to <b>Menu, Settings, Install Drivers</b>.</p>
+					<p><img src="images/hardware/install_drivers.png"></p>
+
+					<p>The program will then scan your computer for any drivers that you may need, this may take some time.</p>
+					<p>When it has finished scanning, you will see a dialog box similar to the one below.</p>
+					<p><img src="images/hardware/radeon/radeon2.png"></p>
+
+					<p>For <b>ATI</b>, we would select: <b>Using Video Driver for the AMD graphics accelerators from fglrx (proprietary) </b>(second in the list in the above picture).
+					Now click on <b>Apply Changes</b>. Enter your password when prompted.</p>
+					<p><img src="images/hardware/driverpassword.png"></p>
+
+					<p> You will then see this dialog as it downloads and installs the driver:</p>
+					<p><img src="images/hardware/radeon/radeon3.png"></p>
+
+					<p>When the driver has finished, click on <b>Close. Now restart your computer.</b></p>
+					<p>Now we need to make sure that our new <b>Menu</b> entries launch correctly. Go to <b>Menu, Settings, Main Menu</b>.</p>
+					<p><img src="images/hardware/radeon/radeon4.png"></p>
+
+					<p>A new window will pop up, select <b>Settings</b> on the left then the first AMD menu entry on the right and click on <b>Properties</b>.
+					This will bring up a new window, edit each field so that it looks the same as in the picture below. When you have finished
+					editing, click on <b>OK </b>on the<b> Launcher Properties </b>window.</p>
+					<p><img src="images/hardware/radeon/radeon5.jpg"></p>
+
+					<p>Now click on the second AMD menu entry on the right and click on <b>Properties</b>. This will bring up a new window, edit each field so that it
+					looks the same as in the picture below. When you have finished editing, click on <b>OK </b>on the<b> Launcher Properties </b>
+					window. Now click on <b>Close</b> on the <b>Main Menu</b> window.</p>
+					<p><img src="images/hardware/radeon/radeon6.jpg"></p>
+
+					<p>The <b>AMD Catalyst</b> menu item will let you configure your graphics, with limited access in the <b>Catalyst Control Center</b>.</p>
+					<p><img src="images/hardware/radeon/radeon7.jpg"></p>
+
+					<p>The <b>AMD Catalyst Admin</b> window will give you full access to all the settings in the <b>Catalyst Control Center</b> including
+					options like&nbsp; <b>Switchable Graphics</b> if you have it. You will need to enter your password to access this control panel.</p>
+					<p><img src="images/hardware/radeon/radeon8.jpg"></p>
+
+NO support for ATI Catalyst drivers in Linux Lite 4.x Series -->
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="nvidia">Graphics - NVIDIA</a></h2>
+					<p>If you&#39;re not sure if your graphics card is nVidia or not, open up a terminal and run this command:</p>
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo lshw -C display</code></pre><br>
+					<p><img src="images/hardware/nvidia/nvidia1.png"></p>
+
+					<p>You see under <b>product:</b> <b>nVidia</b> or <b>GeForce</b> (and similar naming schemes for nVidia cards) depending on your card. The
+					<b>vendor:</b> line may also show you the Product or Company name.</p>
+					<p><b>NOTE: You must be connected to the internet before you start the driver install.</b></p>
+					<p>The next step is to go to <b>Menu, Settings, Install Drivers</b>.</p>
+					<p><img src="images/hardware/install_drivers.png"></p>
+
+					<p>The program will then scan your computer for any drivers that you may need, this may take some time.</p>
+					<p><img src="images/hardware/nvidia/nvidia2.png"></p>
+
+					<p>When it has finished scanning, you will see a dialogue box similar to the one below.</p>
+					<p><img src="images/hardware/nvidia/nvidia3.png"></p>
+
+					<p>Generally you will want to select the current version, the tested driver. In the above example we selected the <b>Using NVIDIA binary driver (proprietary, tested).</b></p>
+					<p><b>NOTE:</b> If you plan to play graphic intensive games or you have a lot of Steam games, you need to select the <b>proprietary, tested</b> driver.</p>
+					<p>Now click on <b>Apply Changes</b>. You will be prompted for your password:</p>
+					<p><img src="images/hardware/driverpassword.png"></p>
+
+					<p> You will see the following dialog as it downloads and installs:</p>
+					<p><img src="images/hardware/nvidia/nvidia4.png"></p>
+
+					<p>When the driver has finished, restart your computer.</p>
+
+					<p>Now head over to <b>Menu, System, NVIDIA X Server Settings</b>.</p>
+					<p><img src="images/hardware/nvidia/nvidia5.png"></p>
+
+					<p>Once you open <b>NVIDIA X Server Settings,</b> you will have a number of options to select as well as some technical data to look over. </p>
+					<p><img src="images/hardware/nvidia/nvidia6.png"></p>
+
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="optimus">Graphics - NVIDIA Prime</a></h2>
+					<p>This method should ONLY be used if the above nVidia install method does not give you Prime options in the Nvidia Settings Manager. From a fresh install of Linux Lite, open up a terminal and type:</p>
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo apt-get update</code></pre><br>
+
+					<p>To install the recommended driver, run the following command:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo ubuntu-drivers autoinstall</code></pre><br>
+
+					<p>Now restart your computer.</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="dualmonitors">Dual Monitor Setup Instructions</a></h2>
+					<p>If you have two monitors, they will start out 'mirroring' the same displayed output.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors1.png"></p>
+
+					<p>To get the monitors to act as one large area allowing you to spread your work out separately on each, you can now do that easily through the GUI <b>Settings
+					Manager</b> instead of through terminal commands and manually editing configuration files.</p>
+					<p>Go to <b>Menu, Settings, Settings Manager</b>.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors2.png"></p>
+
+					<p>Click on <b>Display</b> under the <b>Hardware</b> category.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors3.png"></p>
+
+					<p>Initially, both monitors will have the <b>Mirror displays</b> box checked.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors4.png"></p>
+
+					<p>Click on the first monitor listed on the left and un-check <b>Mirror displays</b> on the right. Repeat the procedure for the second monitor.</p>
+					<p>Drag and drop each screen to where you want them to be arranged. Click <b>Apply</b> when you are finished.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors5.png"></p>
+
+					<p>Once they are no longer mirrored, you may see that one of them is missing the desktop wallpaper and the lower panel only spans one of them.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors6.png"></p>
+
+					<p>Click <b>All Settings</b> to go back to the main <b>Settings Manager</b> window and choose <b>Desktop</b> under the <b>Personal</b> category.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors7.png"></p>
+
+					<p>Whichever monitor the <b>Desktop</b> settings window is on, that is the one it will apply to. Drag it over to the monitor that is blank and notice how the
+					monitor description changes according to which one it is on.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors8.png"></p>
+
+					<p><img src="images/hardware/dualmonitors/dual-monitors9.png"></p>
+
+					<p>When you drag the Display settings window over to another monitor, the wallpaper that was highlighted on the one you dragged from stays highlighted,
+					but no change will take effect on the second monitor until you actually click on one of the wallpapers. You may set a different wallpaper for each monitor.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors10.png"></p>
+
+					<p>If you want one picture to span across both screens, set the second screen to <b>None</b> in the <b>Style</b> drop down box. (Remember - you need to have the Desktop
+					settings window positioned on the second monitor to do this.)</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors11.png"></p>
+
+					<p>Then move the Desktop settings window back to the monitor with the wallpaper displayed and select <b>Spanning screens</b> from the <b>Style</b> drop down box.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors12.png"></p>
+
+					<p>Now, you will have wallpaper spanning across both screens; but you still have the panel stuck on only one of them.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors13.png"></p>
+
+					<p>To get your panel to also span both monitors, go back to the main Settings Manager window and choose <b>Panel</b> under the <b>Personal</b> category.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors14.png"></p>
+
+					<p>In the Panel settings window, click on the box next to <b>Span Monitors</b>.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors15.png"></p>
+
+					<p>Congratulations, you have successfully set up and configured dual monitors.</p>
+					<p><img src="images/hardware/dualmonitors/dual-monitors16.png"></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="sound">Sound Configuration</a></h2>
+					<p>The audio icon can be found in the lower right hand corner, commonly referred to as the system tray.</p>
+					<p><img src="images/hardware/sound/sound_config1.png"></p>
+
+					<p>Left click on the speaker icon. You can drag the main slider to the left or right to control main volume. Now click on <b>Audio Mixer</b>.
+					<p><img src="images/hardware/sound/sound_config2.png"></p>
+
+					<p>You will be brought to a window similar to this one.</p>
+
+					<p><img src="images/hardware/sound/sound_config3.png"></p>
+
+					<p>In the window above you can adjust volume settings for output. Using the sliding bars. You can toggle mute with the
+					speaker icon: <img src="images/hardware/sound/sound_config4.png">It will change it's background color when active: <img src="images/hardware/sound/sound_config5.png">
+					You can lock channels using: <img src="images/hardware/sound/sound_config6.png"> so that when volume is raised or lowered it is done
+					equally. Or you can toggle and set the volume to be louder on one side. This icon: <img src="images/hardware/sound/sound_config7.png">is
+					used to specify the default device used by PulseAudio.</p>
+
+					<p><b>Playback </b>- will list programs currently producing audio, or able to. You can toggle access per program and
+					or adjust volume per program here. The method used is the same as mentioned above.</p>
+					<p><img src="images/hardware/sound/sound_config8.png"></p>
+
+					<p><b>Recording </b>- will list programs currently using an input method, be it line-in or a microphone. You can toggle access per program and or adjust volume
+					per program here. The method used is the same as mentioned above.</p>
+					<p><img src="images/hardware/sound/sound_config9.png"></p>
+
+					<p><b>Output Devices </b>- is for main configuration of sound levels across your system.</p>
+					<p><img src="images/hardware/sound/sound_config3.png"></p>
+
+					<p><b>Input Devices </b>- this includes microphones and other line-in devices, such as TV tuner cards with line in. Adjusting the
+					levels and settings are the same method as described above.</p>
+					<p><img src="images/hardware/sound/sound_config10.png"></p>
+
+					<p><b>Configuration </b>- this lists known profiles for your sound card. In most cases there is no need to select anything here
+					unless you intend to disable your sound completely, or have a unique profile setting, such as surround sound, mono, or stereo out.</p>
+					<p><img src="images/hardware/sound/sound_config11.png"></p>
+
+					<p><b>Notes</b>: Being able to toggle on mute and unmute on multiple things can cause issues. And at times the device may
+					be muted upon install. Show caution here as you may mute a certain program and forget about it entirely. If unmuting and adjusting
+					settings for your sound card and related programs do not work at all, there may be a driver issue. Refer below for resources on how to
+					remedy this. You can find help by using the <a href="#sysreport">Lite System Report tool</a> and using the directions to upload the generated report to the Forums.</p>
+
+					<h2><a name="volumetog">Volume Toggles</a></h2>
+					<p>Here, we will show you how to set keyboard shortcuts for <b>Volume + Volume - and Mute Volume</b>.</p>
+					<p>Providing you are not already using the hot keys on a supported multimedia keyboard, the following is an excellent replacement.</p>
+
+					<p>First step is to right click on the <b>Volume</b> icon in the tray, select <b>Properties</b> and ensure <b>Enable keyboard shortcuts for volume control</b> is ticked.
+					<p><img src="images/hardware/sound/volumetoggle/volumetog1.png"></p>
+
+					<p>1. Next click on <b>Menu, Settings, Keyboard</b> and click on the <b>Applications Shortcuts</b> tab.
+					<p><img src="images/hardware/sound/volumetoggle/volumetog2.png"></p>
+
+					<p>2. Next click on the <b>Add</b> button and paste in the following:</p>
+					<p><b>pactl -- set-sink-volume 0 +10%</b></p>
+					<p>3. Click Ok and then hold down the <b>Right Alt</b> key and the <b>=/+</b> near the top of your keyboard.</p>
+					<p><img src="images/hardware/sound/volumetoggle/volumetog3.png"></p>
+					<p>Now <b>Right Alt plus =/+</b> is set to raise the main volume.</p>
+					<p><img src="images/hardware/sound/volumetoggle/volumetog4.png"></p>
+
+					<p>4. To set a toggle to lower the volume by 10% each time, repeat steps 1 -3 above but this time to lower the volume, enter this command:</p>
+					<p><b>pactl -- set-sink-volume 0 -10%</b>
+					<p>5. This time hold down the <b>Right Alt</b> key and the <b>-/_</b> near the top of your keyboard (next to the =/+ button).</p>
+					<p>Now <b>Right Alt plus -/_</b> is set to lower the main volume.</p>
+					<p><img src="images/hardware/sound/volumetoggle/volumetog5.png"></p>
+
+					<p>6. To set a toggle to mute the volume repeat steps 1 -3 above but this time to mute the volume, enter this command:</p>
+					<p><b>pactl -- set-sink-mute 0 toggle</b>
+					<p>7. This time hold down the <b>Right Alt</b> key and the <b>M</b> on your keyboard.</p>
+					<p>Now <b>Right Alt plus M</b> is set to mute the main volume.</p>
+					<p><img src="images/hardware/sound/volumetoggle/volumetog6.png"></p>
+
+					<p>Now all 3 volume toggles have been set, try them out.</p>
+					<p><img src="images/hardware/sound/volumetoggle/volumetog7.png"></p>
+
+					<h2><a name="ressound">Resources for Audio Drivers</a></h2>
+					<p><a target="_blank" href="https://help.ubuntu.com/community/Sound">Ubuntu Wiki - Sound</a> Contains a list of guides for configuring specific drivers for older and odd sets of sound cards.</p>
+					<p><a target="_blank" href="https://help.ubuntu.com/community/SoundTroubleshooting">Ubuntu Wiki - Troubleshooting</a> Contains steps to help trouble shoot and configure sound cards.</p>
+					<p><a target="_blank" href="http://www.halfgaar.net/surround-sound-in-linux">Halfgaar</a> Has a great guide to setting up surround sound under linux.</p>
+					<p><a target="_blank" href="http://alexsleat.co.uk/2011/12/03/setting-up-surround-sound-in-linux/"> More surround sound help from here</a>.</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+                			<h2><a name="printer">Printer Setup</a></h2>
+					<p><b>1.</b> Plugging in a printer will prompt a dialog if detected and attempt to find a matching driver. (If your driver was
+					plugged in during your initial install you may not see a prompt, you may refer to step 3 below.)</p>
+					<p><img src="images/hardware/printing/printer1.png"></p>
+
+					<p><b>2.</b> If a printer and driver has been detected you will see this dialog. (Note, the dialog should appear in upper right of your screen)</p>
+					<p><img src="images/hardware/printing/printer2.png"></p>
+
+					<p><b>3.</b> You can further configure or manage printing jobs or printers by going to printing located in <b>Menu, System, Printers</b>.</p>
+					<p><img src="images/hardware/printing/printer3.png"></p>
+
+					<p><b>4.</b> Once you open the <b>Printing</b> menu it will bring you to a simple dialog to select, view and manage options related to your printer.</p>
+					<p><img src="images/hardware/printing/printer4.png"></p>
+
+					<p><b>5.</b> You can find options for your printer by highlighting (left clicking) on your printer, then click on <b>Printer, Properties</b>.</p>
+					<p><img src="images/hardware/printing/printer5.png"></p>
+
+					<p><b>6.</b> If a printer if not listed in the window after opening it, you will need to plug in the device and click on the <b>+</b> sign located below the menu.</p>
+					<p><img src="images/hardware/printing/printer6.png"></p>
+
+					<p><b>7.</b> Once you click on the <b>+</b>  sign above, you will see this window if the printer was detected properly. You can then select the method of connect
+					and printer on the pane near the bottom of the window. (You may see more than one option if your device is an all in one device, so select
+					from the left pane carefully.) From here you can also select a <b>Network Printer</b> if you are connected to a home network and a printer is available.</p>
+
+					<p><b>7.1</b> If for some reason you are unable to see a network printer on a machine using Windows you may need to configure samba (a sharing and networking tool for Linux >
+					Windows) You can find help doing this <a target="_blank" href="https://help.ubuntu.com/community/NetworkPrintingWithUbuntu">here</a>.</p>
+					<p><img src="images/hardware/printing/printer7.png"></p>
+
+					<p><b>8.</b> Clicking Forward on the above window will bring you to this window where you can set the <b>Printer Name, Description </b>and<b> Location</b> for the printer.
+					However <b>Description</b> and <b>Location</b> are not required, unless you share a printer or use one over a network.</p>
+					<p><img src="images/hardware/printing/printer8.png"></p>
+
+					<p><b>9.</b> Cups is a web interface for managing your printer. Once installed, click <a target="_blank" href="http://localhost:631">here</a> to manage your printer.</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+               			<h2><a name="shareprinter">Share your Printer from Linux Lite</a></h2>
+
+					<p>The following tutorial gives an example of how to set up a shared printer connected to Linux Lite.
+
+					<p>Make sure the printer connected to Linux Lite and is fully operational, drivers installed and set up.</p>
+
+					<p>Temporarily disable the Linux Lite Firewall, see <a target="_blank" href="tutorials.html#firewall">here</a>. After you are able to print from Windows to a Linux Lite shared printer, we will enable it again and create the correct rule for it. 
+					Firewall blocking services is usually overlooked.</p>
+
+					<p>Click on <b>Menu, System, Printers</b>.</p>
+
+					<p>Select (highlight) your Printer and select from the menu <b>Printer, Shared</b>.</p>
+
+					<p><img src="images/hardware/printing/shared_printer1.png"></p>
+
+					<p>Then, considering this is a home network and that you want to make your life as easy as possible, let's allow quite a few options in <b>Server Settings</b>. Open <b>Server, Settings</b> and configure as shown below:</p>
+
+					<p><img src="images/hardware/printing/shared_printer2.png"></p>
+
+					<p>That's all there is on your Linux Lite side. Now let's go to your Windows 10 machine to connect to the shared printer.</p>
+
+					<p>Before going into Windows, make sure you know the correct name of your printer. For example, my printer name is <b>Samsung-ML-2550</b> (case sensitive). This is the name you define when adding the 
+					printer to Linux Lite. You do not want to have spaces in the name and also understand that lower case and UPPER case do make a difference in Linux. So, with that said, in Windows 10:</p>
+
+					<p><b>Devices and Printers -> Add a printer - The printer that I want isn't listed</b>.</p>
+
+					<p><img src="images/hardware/printing/shared_printer3.png"></p>
+
+					<p><b>Select a shared printer by name</b>.</p>
+
+					<p>The printer can the be added using the hostname or the IP address of your Linux Lite PC on port 631. To keep it simple, in case you do not have DNS resolution in your local network, 
+					you will use the IP address of your Linux Lite PC, as shown below:</p>
+
+					<p><i>http://[LINUX LITE PC IP]:631/printers/[YOUR PRINTER'S CASE SENSITIVE NAME]</i></p>	
+
+					<p><img src="images/hardware/printing/shared_printer4.png"></p>
+
+					<p>From there, just select the brand and model for your printer as you usually do in Windows... and you should be able to print thereafter.</p>
+
+					<p><img src="images/hardware/printing/shared_printer5.png"></p>
+
+					<p><img src="images/hardware/printing/shared_printer6.png"></p>
+
+					<p><img src="images/hardware/printing/shared_printer7.png"></p>
+
+					<p>Once you can print from Windows, you can <a target="_blank" href="tutorials.html#firewall">re-enable</a> your firewall and use the <a target="_blank" href="tutorials.html#firewall">firewall tutorial section</a> to add CUPS as a Service, 
+					and allow port 631 for both TCP and UDP eg.</p>
+
+					<p><img src="images/hardware/printing/shared_printer8.png"></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+                			<h2><a name="rescomprint">Resources for compatible Printers</a></h2>
+
+					<p><b>Manufacturers</b></p>
+
+					<p><a target="_blank" href="http://www.brother.com/html/download/index.htm">Brother Linux Drivers</a><br>
+					<a target="_blank" href="http://www.canon-europe.com/support/">Canon Linux Drivers</a><br>
+					<a target="_blank" href="https://www.dell.com/support/home/nz/en/nzbsd1/?app=drivers">Dell Printer Drivers</a><br>
+					<a target="_blank" href="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX">Epson Linux Drivers</a><br>
+					<a target="_blank" href="https://developers.hp.com/hp-linux-imaging-and-printing">HP Linux Drivers</a><br>
+					<a target="_blank" href="https://www.lexmark.com/en_us/support/download-search.html">Lexmark Linux Drivers</a><br>
+					<a target="_blank" href="https://support.hp.com/us-en/products/printers/samsung-printers">Samsung Linux Drivers</a><br>
+					<a target="_blank" href="http://www.openprinting.org/driver/Postscript-Sharp/">Sharp Linux Drivers</a> (supported printers list)<br>
+					<a target="_blank" href="http://www.openprinting.org/driver/Postscript-Toshiba/">Toshiba Linux Drivers</a> (supported printers list)<br>
+					<a target="_blank" href="http://www.openprinting.org/driver/Postscript-Xerox/">Xerox Linux Drivers</a> (supported printers list)</p>
+
+					<p><b>Resources</b></p>
+
+					<p><a target="_blank" href="http://www.openprinting.org/printers">Open Printing</a> - A substantial resource for driver downloads and information.<br>
+					<a target="_blank" href="https://wiki.ubuntu.com/HardwareSupportComponentsPrinters">Ubuntu's</a> Wiki also contains a list of known working and compatible drivers and printers.<br>
+					<a target="_blank" href="http://www.turboprint.info/">TurboPrint</a> - Also offers a paid software alternative that has up to date drivers for Brother,
+					Canon, Epson &amp; HP.<br />
+
+					<h2><a name="hpprinters">HP Printers on Linux Lite</a></h2>
+					<p>HP compatible printers can be found <a href="https://developers.hp.com/hp-linux-imaging-and-printing/supported_devices/index" target="_blank">here</a>.</p>
+					<p>The latest master driver for HP printers is available for download <a href="https://developers.hp.com/hp-linux-imaging-and-printing/gethplip" target="_blank">here</a> (Select Ubuntu). 
+					
+					Changelog <a href="https://developers.hp.com/hp-linux-imaging-and-printing/release_notes" target="_blank">here</a>. </p>
+					<p>If you have an HP Printer and you used this guide to successfully install your printer, there is a program that allows you to easily manage your printer. Open
+					up a terminal and type:</p>
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo apt-get install hplip-gui</code></pre><br>
+					<p>Once it&#39;s installed go to <b>Menu, Settings, HPLIP Toolbox</b>. This will place and HP icon in your tray where you can configure and manage your HP printer.
+					Right click on the icon for options.</p>
+					<p><img src="images/hardware/printing/printing-hplip.png"></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+                			<!--<p><b><a name="wirelessdev"></a>Wireless Devices</b></p>
+					<p>To be written.</p>
+					<a href="#top">Top of page</a></p>-->
+
+					<h2><a name="bluetooth">Bluetooth - Enabling full support</a></h2>
+					
+					<p>If you need support for this, please read through the thread <a target="_blank" href="https://www.linuxliteos.com/forums/network/(solved)-enabling-full-bluetooth-support-in-linux-lite/">here</a>.</p>
+					<p>Credit to - N4RPS, Wirezfree and colin23erk (may be out of date).</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="keyboard">Keyboard Related</a></h2>
+					<p>You can find information for adding or modifying hotkeys (or shortcuts) on the <a target="_blank" href="http://docs.xfce.org/xfce/xfce4-settings/keyboard">XFCE wiki</a>.</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="booting">Booting Issues</a></h2>
+					<p><b>Black screen whilst trying to boot</b></p>
+					<p>This is usually due to the graphics chip you have, it is easily remedied and the problem should not reappear once you have installed the <a href="#graphics">graphics drivers</a> for
+					your computer. So first we need to boot you successfully into the desktop.</p>
+					<p>Hold down the Shift or ESC key as you boot up your computer. You should see a screen like the following:</p>
+					<p><img src="images/hardware/bootissues/bootissues1.png"></p>
+
+					<p>Next press the <b>e</b> key whilst that top line is highlighted. This will take you to the next screen. Use your arrow keys to move down to the line highlighted in the
+					picture below. Use the arrow key until you reach the end of that line.</p>
+					<p><img src="images/hardware/bootissues/bootissues2.png"></p>
+
+					<p>Press the backspace key repeatedly until you remove: <b>ro splash quiet $vt_handoff </b>and replace that text with:<b> nomodeset </b>so that it looks like the picture below.</p>
+					<p><img src="images/hardware/bootissues/bootissues3.png"></p>
+
+					<p>Now press either <b>F10</b> or <b>Ctrl+X</b> to boot your machine. Your computer will begin to boot up with scrolling text similar to what is shown below:</p>
+					<p><img src="images/hardware/bootissues/bootissues4.png"></p>
+
+					<p>After which shortly you will get your normal login screen. Now you can login and install your <a href="#graphics">graphics drivers</a>.</p>
+					<p><img src="images/install/login.png"></p>
+
+					<h2><a name="dualboot">Dual Boot Modification/Repair</a></h2>
+					<p>You may be in a situation where you want to modify or repair your dual boot set up.</p>
+					<p><b>Boot Repair</b> is an excellent tool for the job. To install <b>Boot Repair</b>, open a terminal and type (one line at a time):</p>
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo add-apt-repository ppa:yannubuntu/boot-repair</code></pre><br>
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo apt-get update</code></pre><br>
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo apt-get install -y boot-repair &amp;&amp; (boot-repair &amp;)</code></pre><br>
+
+						<p>After the install <b>Boot Repair</b> will launch automatically and scan your computer for your boot configuration and other operating systems.</p>
+						<p><img src="images/hardware/bootrep/bootrep1.png"></p>
+						<p><img src="images/hardware/bootrep/bootrep2.png"></p>
+
+						<p>Click <b>Advanced options</b> to see all the features.</p>
+						<p><img src="images/hardware/bootrep/bootrep3.png"></p>
+
+						<p>Now use <b>Boot Repair</b> to carry out the task you need doing. <b>Boot Repair</b> is in <b>Menu, System, Repair the boot of the computer</b>. More information can be found here -
+						<a href="https://help.ubuntu.com/community/Boot-Repair" target="_blank">https://help.ubuntu.com/community/Boot-Repair</a> </p>
+
+						<p><a href="#top">Top of page</a></p>
+
+						<h2><a name="installissues">Installation Issues</a></h2>
+						<p><b>No Option to Install Alongside Windows?</b></p>
+						<p>If this happens, it usually means that Windows is already using four partitions
+						on the hard drive, which is the limit for BIOS based computers using traditional MBR type partitions. (Newer computers may that use UEFI firmware <i>may</i> use
+						GPT partitioned drives that do not have the 4 partition limit. This discussion does not get into that.)  You will need to either eliminate one of the current
+						partitions, or add another hard drive to the computer for installing Linux Lite.</p>
+
+						<p>If you are unfamiliar with partitioning, it would be best to make a post on the <a href="https://www.linuxliteos.com/forums/" target="_blank">Forums</a> for help before
+						proceeding. Generally speaking, in this situation there is may be a partition set aside where the manufacture has put copies of drivers and other extras
+						that were part of the initial installation. There may also be a recovery partition that gets used for reinstalling Windows in the event that is needed. If you
+						went through the process of creating a recovery USB or set of recovery DVD's, then you can probably get rid of the recovery partition. Same goes for the partition
+						set aside for manufacturer installed drivers and extras, if you made a copy of that.</p>
+
+						<p>Once one or both of those partitions has been deleted, you may also need to shrink the main (largest) Windows partition (probably labeled as "C: drive").
+						If you have the space, ideally you should try to allocate 50-100GB for Linux Lite. (It will be fine with +/-15GB; but you won't have much room for expansion).
+						Before shrinking any partition, be sure to defragment the partition in Windows first. Then shrink the partition and leave the free space as it is, un-partitioned.
+						Do not create Linux partitions with Windows disk manager. It is best done using Linux tools.</p>
+
+						<p>At that point, you can go ahead and run the installer again and it should now offer the choice to install "Alongside Windows". If it needs to it will create
+						an "extended" partition that will serve as a container for the "logical" partitions needed for the installation. (That is a way that is commonly used to get around
+						the 4-partition maximum rule. As long as only 3 partitions are "primary", an extended partition can be used to house multiple logical partitions within it - thus
+						giving you the ability to have more than four partitions.)</p>
+
+						<p><b>Does Your Newer Computer Use UEFI Firmware for Booting?</b></p>
+						<p>If you have a newer model computer with UEFI firmware, it may allow for two modes of booting:  UEFI/EFI-mode or BIOS/CSM/Legacy-mode.
+						There is a good chance that Windows is installed to the hard drive in UEFI-mode. In that case it will also be using the newer GPT partitioning scheme on the hard drive.
+						(This applies mainly to Windows 8, but some versions of Windows 7 may be installed that way too.)</p>
+
+						<p>You need to confirm for sure which way Windows is installed before attempting the Linux Lite installation. The first thing to check is
+						whether or not you are using a 64-bit version of Windows. You should be able to find that out by going to the "System" section from the
+						"Control Panel". If you find that it is a 32-bit version, then you <b>will</b> be able to install Linux Lite. (Only 64-bit versions of Windows currently support UEFI booting.)</p>
+
+						<p>If you have a 64-bit version of Windows, it could be installed in either BIOS/Legacy-mode or in UEFI-mode; so you will need to investigate
+						further. Go to Windows disk management and take a look at the partitions on the hard drive. If you see a small partition near the beginning of
+						the drive, formatted as <b>FAT32</b>, labeled along the lines of "System" or "EFI System Partition", then you have a UEFI installation
+						of Windows and <b>will not</b> be able to properly install Linux Lite. If you don't see that partition, then you should have an MBR-partitioned
+						disk and you <b>can</b> install Linux Lite. If you need help figuring that out, take a screenshot of your hard drive partitions and post that
+						to the <a href="https://www.linuxliteos.com/forums/" target="_blank">Forums</a> with your inquiry.</p>
+
+						<h2><a name="install-multi-drive">Dual Boot Install on Systems with More Than One Hard Drive?</a></h2>
+						<p>When choosing to install Linux Lite alongside Windows on a computer with more than one hard drive, the default action of the installer is
+						to install the Linux boot loader to the MBR of the first hard drive. Since Windows is likely installed to the first drive, its boot loader
+						will be replaced on the MBR with the Linux boot loader. The Linux boot loader will see the Windows installation and add it to the boot
+						menu on start-up. This is how most people do the installation.</p>
+
+						<p>However, some people prefer to keep the Windows boot loader intact on its own drive and install the Linux boot loader to its own
+						drive. (There are various reasons for doing that, the most common being that it makes booting Windows easier if they decide to remove
+						the Linux installation.)  After the installation completes, they then set the computer's BIOS to boot from the Linux drive. Even
+						though the Linux boot loader is installed to a separate drive, it will see the Windows installation and add a boot choice for it. By booting from the Linux drive,
+						you get the choice to boot either OS. If you later remove Linux, simply reset the BIOS to boot from the Windows drive and it will boot Windows as it did before your
+						installation of Linux.</p>
+
+						<p>To accomplish this, you must choose the "Something else" option from the "Installation Type" screen during installation. On the following screen you
+						will set-up your partitions and mount points manually. Then, near the bottom of the window, you need to set the "location for boot loader installation" to the MBR of the drive
+						containing Linux Lite. For example, if you had two hard drives - /dev/sda (Windows) and /dev/sdb (Linux) - you would set the location
+						to /dev/sd<b>b</b> (without any partition number at the end).</p>
+
+						<p>If you are not experienced with partitioning, or are unsure about how to proceed, post on our
+						<a href="https://www.linuxliteos.com/forums/" target="_blank">Forums</a> for assistance.</p>
+
+						<p><a href="#top">Top of page</a></p>
+
+						<h2><a name="sysreport">Lite System Report tool</a></h2>
+						<p>The <b>Lite System Report</b> tool was created to better help people who experienced a problem with their computer. The report contains useful information about the
+						hardware, network and software. The idea of the tool is to run it, then you would attach the generated file to a <a href="https://www.linuxliteos.com/forums/" target="_blank">Forum</a> thread with a title about the issue you are having.
+						Lets get started.</p>
+
+						<p>Click on <b>Menu, Settings, Lite System Report</b>.</p>
+						<p><img src="images/hardware/sysreport/systemreport1.png"></p>
+
+						<p>A window will pop open, read the information and click on <b>Continue</b> when ready.</p>
+						<p><img src="images/hardware/sysreport/systemreport2.png"></p>
+
+						<p>Enter your password and press the Enter key.</p>
+						<p><img src="images/hardware/sysreport/systemreport3.png"></p>
+
+						<p>Unselect the options you don't need to or have been asked to exclude from your Report.</p>
+						<p><img src="images/hardware/sysreport/systemreport4.png"></p>
+
+						<p>The report will take anywhere from a few seconds to less than a minute depending on your hardware.</p>
+						<p><img src="images/hardware/sysreport/systemreport5.png"></p>
+
+						<p>When it is finished, the Report will appear. The Report will be similar to the one below. Click on <b>Save</b>.</p>
+						<p><img src="images/hardware/sysreport/systemreport6.png"></p>
+
+						<p>Next you'll be asked where to save the Report, in the following example we select our Home folder (<b>/home/jerry</b>).</p>
+						<p><img src="images/hardware/sysreport/systemreport7.png"></p>
+
+						<p>In this example the Report is located in <b>/home/jerry</b>.</p>
+						<p><img src="images/hardware/sysreport/systemreport8.png"></p>
+
+						<p>Go to the Linux Lite Forums. A link is provided here - <a href="https://www.linuxliteos.com/forums/" target="_blank">http://www.linuxliteos.com/forums/</a>
+						Start a new thread with an accurate Title description of the problem you are having, then a detailed write up of your problem. At the bottom of the page you will see
+						where you can add attachments. <b>Browse</b> to <b>/home/youruser </b>and select the report.</p>
+						<p><img src="images/hardware/sysreport/systemreport9.png"></p>
+
+						<p>Now click on <b>Post</b>, and someone will help you as soon as they're available.</p>
+
+						<p><a href="#top">Top of page</a></p>
+
+						<h2><a name="findhelpon">Finding help online</a></h2>
+						<p>Feel free to seek advice or help on the <a href="https://www.linuxliteos.com/forums/" target="_blank">Forums</a> at any point.
+						Or use any other means of support or contact located <a target="_blank" href="https://www.linuxliteos.com/support.html">here</a>. If you
+						can not find a solution contained in this page or links of related information.</p>
+
+						<p><a href="#top">Top of page</a></p>
+
+				</div>
+				<div class="clear"> </div>
+			</div>
+		</div>
+		<div class="clear"> </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Help Manual - Glossary</title>
+<meta name="description" content="Description to go here." />
+<!-- jQuery-->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/code.css" rel="stylesheet" type="text/css" media="all" />
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<!--fonts-->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<style>
+b    {font-weight: 400;}
+ </style>
+<style>
+i    {font-style: italic;}
+ </style>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+<style>.highlight { background: #FFFF40; }</style>
+<script type="text/javascript" src="js/highlight.js"></script>
+
+</head>
+<body onload="highlight();">
+	<div class="header">
+		<div class="header-left header-left1">
+			<div class="logo">
+				<center><a href="index.html"><img src="images/logo.png" alt=""></a></center>
+			</div>
+			<div class="top-nav">
+				<ul >
+					<li  ><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li class="active"><a href="glossary.html" class="black1" > GLOSSARY</a></li>
+				</ul>
+			</div>
+			<ul class="social-in">
+				<li><a href="https://www.facebook.com/linuxliteos" target="_blank"><i class="facebook"> </i></a></li>
+				<li><a href="https://twitter.com/linuxlite" target="_blank"><i class="twitter"> </i></a></li>
+				<li><a href="https://www.reddit.com/r/LinuxLite/" target="_blank"><i class="reddit"> </i></a></li>
+			</ul>
+		</div>
+		<!---->
+		<div class="header-top">
+			<div class="logo-in">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="top-nav-in">
+			<span class="menu"><img src="images/menu.png" alt=""> </span>
+				<ul >
+					<li  ><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li class="active"><a href="glossary.html" class="black1" > GLOSSARY</a></li>
+				</ul>
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav-in ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+
+			</div>
+			<div class="clear"> </div>
+		</div>
+			<!---->
+		<div class="content">
+			<div class="about">
+				<div class="about-top">
+					<div class="grid-about">
+					</div>
+					
+			<!-- Offline Search feature - Start -->
+            				
+					<div class="block" style="padding-top: 39px;">
+
+					<form id="tipue_search" action="search.html">
+					<input type="text" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search terms" required>
+					<input type="image" id="search" name="" src="images/search.png" class="tipue_button search" alt="Search"><br><br>
+
+					<label for="tipue_per_page">Results per page:</label>
+					<select name="per_page" id="tipue_per_page">
+					<option value="7">7</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					</select><br><br>
+					<fieldset style="border:none;">
+					<legend style="display:inline;">Match:</legend><br>
+					<input type="radio" name="matchtype" id="any" value="0" checked="checked"><label for="any"> any search terms</label> &nbsp; <input type="radio" name="matchtype" id="all" value="1"><label for="all"> all search terms</label><br><br>
+					<p>TIP: For optimal results, only search for one or two words eg. <i>printer</i> instead of <i>how do I install a printer</i></p><br>
+					</fieldset>
+					</form></div>
+
+					<div id="tipue_search_content"><div class="tipue_search_rect1"></div><div class="tipue_search_rect2"></div><div class="rect3"></div></div>
+					
+			<!-- Offline Search feature - End -->
+
+					<h2>Glossary</h2>
+					<p><b>3g</b> - Short form of <i>third generation</i>, the third generation of mobile telecommunications technology</p>
+					<p><b>alsa</b> - <i>Advanced Linux Sound Architecture</i>, provides <b>kernel</b> driven sound card drivers</p>
+					<p><b>architecture</b> - In regards to this Manual, architecture refers to a type of CPU and/or software, ie. 32bit or 64bit</p>
+					<p><b>bios</b> - <i>Basic Input/Output System</i>, a type of <b>firmware</b> used during the booting process</p>
+					<p><b>compositing</b> - Process of combining an image with a background to create the appearance of partial or full transparency</p>
+					<p><b>credentials</b> - Username and password. Used to control access to information or other resources</p>
+					<p><b>decrypt</b> - The process of decoding data that has been encrypted into a secret format</p>
+					<p><b>desktop environment</b> - Provides a complete graphical user interface (GUI) for a system</p>
+					<p><b>developer</b> - A computer programmer who writes software</p>
+					<p><b>domain</b> - A domain contains a group of computers that can be accessed and administered with a common set of rules</p>
+					<p><b>driver</b> - A computer program that operates or controls a device that is attached to a computer</p>
+					<p><b>encrypt</b> - The process of encoding messages or data in such a way that only authorized parties can read it</p>
+					<p><b>extended partition</b> - Is a <b>primary partition</b> that has been divided up into <b>logical partitions</b> as a means of creating more partitions than the four that would otherwise be possible</p>
+					<p><b>ext2</b> - Second extended filesystem is a file system for Linux</p>
+					<p><b>ext3</b> - Third extended filesystem, a journaled file system for Linux</p>
+					<p><b>ext4</b> - Fourth extended filesystem is a journaling file system for Linux, developed as the successor to ext3</p>
+					<p><b>fat32</b> - A Windows filesystem. FAT32 supports up to 2 terabytes of hard disk storage</p>
+					<p><b>filesystem</b> - Used to control how data is stored and retrieved</p>
+					<p><b>firmware</b> - Software that resides in hardware as read only</p>
+					<p><b>free software</b> - Software that the users have the freedom to run, copy, distribute, study, change and improve</p>
+					<p><b>fstab</b> - <i>File Systems Table</i> file is a system configuration file /etc/fstab that lists and mounts storage devices at start up</p>
+					<p><b>gnu</b> - <i>GNUS Not Unix </i>a collection of software that is <b>free software</b> and built around linux <b>kernel</b></p>
+					<p><b>gpt</b> - <i>GUID Partition Table</i>, is a partitioning scheme</p>
+					<p><b>grub</b> - Provides a user the choice to boot one of multiple operating systems installed on a computer</p>
+					<p><b>ip address</b> - <i>Internet Protocol Address</i>, 4 blocks of numbers assigned to each device participating in a computer network</p>
+					<p><b>kernel</b> - A layer of software that is a bridge between computer hardware and applications</p>
+					<p><b>legacy</b> -  A term for out of date hardware and/or software still in use</p>
+					<p><b>linux</b> -  A Kernel developed by Linus Torvalds and a global community of contributors</p>
+					<p><b>logical partition</b> - A logical partition is a partition that has been created inside of an <b>extended partition</b></p>
+					<p><b>mbr</b> - <i>Master Boot Record</i> is a special type of boot sector at the very beginning of a partitioned drive</p>
+					<p><b>mount</b> - In order for a hard disk or disk partition to be accessible by a computer, it must first be mounted</p>
+					<p><b>nas</b> - <i>Network Attached Storage</i>, 1 or more external hard drives connected to a computer network</p>
+					<p><b>ntfs</b> - <i>New Technology File System</i>, a Windows filesystem capable of storing larger files and volumes than <b>fat32</b></p>
+					<p><b>open source</b> - When a software program is open source, it means the program's source code is freely available to the public</p>
+					<p><b>package</b> - A program compressed into one file for installation on a linux based operating system</p>
+					<p><b>partition</b> - A partition is a section of a hard disk</p>
+					<p><b>ppa</b> - <i>Personal Package Archive</i>, a special software repository for uploading source packages to be built and published as an APT repository by <a target="_blank" href="https://launchpad.net/">Launchpad</a></p>
+					<p><b>primary partition</b> - A primary partition is any of the four possible first-level partitions into which a hard disk on a personal computer can be divided</p>
+					<p><b>pulseaudio</b> - A sound server. A background process accepting sound input from one or more sources (processes or capture devices) and redirecting it to one or more sinks (sound cards, remote network PulseAudio servers, or other processes)</p>
+					<p><b>repo</b> - see <b>repository</b></p>
+					<p><b>repository</b> - A storage location from which software packages may be retrieved and installed onto a computer</p>
+					<p><b>samba</b> - Software that provides file and print services for various Windows clients from linux</p>
+					<p><b>secure boot</b> - Secure Boot is a feature enabled by <b>uefi</b> – which replaces the traditional PC <b>BIOS</b></p>
+					<p><b>ssd</b> - <i>Solid State Drive</i> is a data storage device that uses integrated circuit assemblies as memory to store data</p>
+					<p><b>su</b> - allows a computer operator to change the current user account associated with the running terminal <i>(do not use on Linux Lite)</i></p>
+					<p><b>sudo</b> - <i>Superuser do</i>, A command that allows users to run programs with the security privileges of another user (normally the superuser, or root)</p>
+					<p><b>terminal</b> - A text-based interface for typing commands into the computer</p>
+					<p><b>trim</b> - A feature supported by modern solid state drives (SSDs) that helps improve drive performance</p>
+					<p><b>ubuntu</b> - A Debian-based GNU/Linux operating system</p>
+					<p><b>uefi</b> - A specification that defines a software interface between an operating system and platform firmware (replacing the BIOS)</p>
+					<p><b>umount</b> - A command that allows a disk to be safely removed, without causing damage</p>
+					<p><b>uuid</b> - <i>Universally Unique Identifier</i> In regards to hard drives or SSDs, a means to identify a partition with hexadecimal text and inserted hyphenated characters</p>
+					<p><b>vpn</b> - <i>Virtual Private Network</i> Allows you to communicate private information securely over a public network</p>
+					<p><b>workgroup</b> - A collection of computers on a local area network (LAN) that share common resources eg. files, peripherals</p>
+					<p><b>xfce</b> - A free software desktop environment. It aims to be fast and lightweight, while still being visually appealing and easy to use</p>
+
+					<h2>Sources:</h2>
+					<p><a target="_blank" href="http://en.wikipedia.org/">http://en.wikipedia.org/</a><br>
+					<a target="_blank" href="https://www.google.com/">https://www.google.com/</a><br>
+					<a target="_blank" href="http://techterms.com/">http://techterms.com/</a><br>
+					<a target="_blank" href="http://www.linfo.org/">http://www.linfo.org/</a><br></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+				</div>
+				<div class="clear"> </div>
+			</div>
+		</div>
+		<div class="clear"> </div>
+	</div>	
+</body>
+</html>

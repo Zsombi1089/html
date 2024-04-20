@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Help Manual - Customize</title>
+<meta name="description" content="Description to go here." />
+<!-- jQuery-->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/code.css" rel="stylesheet" type="text/css" media="all">
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="">
+<!--fonts-->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<style>
+b    {font-weight: 400;}
+</style>
+<style>
+i    {font-style: italic;}
+</style>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+<style>.highlight { background: #FFFF40; }</style>
+<script type="text/javascript" src="js/highlight.js"></script>
+
+</head>
+<body onload="highlight();">
+	<div class="header">
+		<div class="header-left header-left1">
+			<div class="logo">
+				<center><a href="index.html"><img src="images/logo.png" alt=""></a></center>
+			</div>
+			<div class="top-nav">
+				<ul >
+					<li><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li class="active"><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+			</div>
+			<ul class="social-in">
+				<li><a href="https://www.facebook.com/linuxliteos" target="_blank"><i class="facebook"> </i></a></li>
+				<li><a href="https://twitter.com/linuxlite" target="_blank"><i class="twitter"> </i></a></li>
+				<li><a href="https://www.reddit.com/r/LinuxLite/" target="_blank"><i class="reddit"> </i></a></li>
+			</ul>
+		</div>
+		<!---->
+		<div class="header-top">
+			<div class="logo-in">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="top-nav-in">
+			<span class="menu"><img src="images/menu.png" alt=""> </span>
+				<ul >
+					<li><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li class="active"><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav-in ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+
+			</div>
+			<div class="clear"> </div>
+		</div>
+			<!---->
+		<div class="content">
+			<div class="about">
+				<div class="about-top">
+					<div class="grid-about">
+					</div>
+
+            				<p><a href="#apply_icon">Applying a new Icon set</a><br />
+            				<a href="#mouse_theme">Applying a new Mouse theme</a><br />
+            				<a href="#apply_theme">Applying a new Theme</a><br />
+					<a href="#custll">Customizing Linux Lite</a><br />
+            				<a href="#panel">Customize your Panel Bar</a><br />
+            				<a href="#desktop">Desktop Settings basics</a><br />
+            				<a href="#litewidget">Lite Desktop Widget</a><br />
+            				<a href="#themes">Themes &amp; Icon sets</a><br />
+            				<a href="#tweaks">Window Manager Tweaks</a><br />
+            				<a href="#workspaces">Workspace Settings</a></p>
+            				
+			<!-- Offline Search feature - Start -->            				
+            				
+					<div class="block" style="padding-top: 39px;">
+
+					<form id="tipue_search" action="search.html">
+					<input type="text" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search terms" required>
+					<input type="image" id="search" name="" src="images/search.png" class="tipue_button search" alt="Search"><br><br>
+
+					<label for="tipue_per_page">Results per page:</label>
+					<select name="per_page" id="tipue_per_page">
+					<option value="7">7</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					</select><br><br>
+					<fieldset style="border:none;">
+					<legend style="display:inline;">Match:</legend><br>
+					<input type="radio" name="matchtype" id="any" value="0" checked="checked"><label for="any"> any search terms</label> &nbsp; <input type="radio" name="matchtype" id="all" value="1"><label for="all"> all search terms</label><br><br>
+					<p>TIP: For optimal results, only search for one or two words eg. <i>printer</i> instead of <i>how do I install a printer</i></p><br>
+					</fieldset>
+					</form></div>
+
+					<div id="tipue_search_content"><div class="tipue_search_rect1"></div><div class="tipue_search_rect2"></div><div class="rect3"></div></div>
+					
+			<!-- Offline Search feature - End -->
+
+					<h2><a name="custll">Customizing Linux Lite</a></h2>
+					<p>Linux Lite uses the XFCE desktop environment because it strikes a good balance between resource usage, functionality and customization for the user. It's
+					relatively light on resources which makes it suitable for installation on older computers, giving them a new lease on life, as well as on newer systems.</p>
+
+					<p>Navigating the applications menu and the file system is straightforward, intuitive and is similar to what many people coming from a Windows environment are used to. 
+					At the same time, XFCE offers a variety of ways for people to customize the look and feel of their desktop work environment to suit their own
+					tastes if that is what they want to do.</p>
+
+					<p>That is what this section of the manual is all about. If you get bored with the default setup, you can change it to your liking in a variety of ways.
+					Linux Lite comes with a few themes and icon sets pre-installed already and switching to one of those is quick and easy. You can also download and apply other
+					themes, icons and mouse pointers to your system if you'd like. The panel along the bottom of your screen that holds the Menu launcher and various indicator icons
+					can be customized in a variety of ways too.</p>
+
+					<p>In this section, we'll start off with the more basic ways to customize your desktop. (Over time, we may add examples to this page of additional programs
+					that can be added to your system to spice things up a bit more.)</p>
+
+					<h2><a name="desktop">Desktop Settings basics</a></h2>
+					<p>Some of the most basic changes people like to make are changing the desktop background (wallpaper), deciding whether or not to have certain icons show on
+					the desktop and sometimes they may want to change something about the menu shown when right or middle clicking on the desktop. <b>Desktop Settings
+					</b> is where to look for making those types of changes.</p>
+
+					<p>There are two ways to access the <b>Desktop Settings</b> menu. One way is to simply right click on the desktop and choose <b>Desktop Settings</b>.</p>
+					<p><img src="images/customize/desktop/desktop-01.png"></p>
+
+					<p>Another way is to choose <b>Desktop</b> from the main <b>Settings Manager</b> window, which can be accessed by going to <b>Menu, Settings, Settings Manager</b>.</p>
+					<p><img src="images/customize/desktop/desktop-02.png"></p>
+
+					<p>First, we will look at the <b>Background</b> tab under <b>Desktop Settings</b>.</p>
+					<p><img src="images/customize/desktop/desktop-03.png"></p>
+
+					<p>By default, backgrounds are stored in the file system under the <b>/usr/share/xfce4/backdrops</b> folder. Images in that folder are shown as choices in the <b>
+					Background</b> tab. Just click on the image you want and it will instantly switch to that for your background. If you want to add some
+					of your own pictures to the choices, open your file manager <b>As Administrator</b>, enter your password, then navigate to that folder
+					and paste your image into it.</p>
+
+					<p>(<b>HINT:</b>  You can just right click your desktop, choose <b>Open as Administrator</b>, enter your password and it will
+					open the Thunar file manager at your Desktop folder. From there, just navigate to where your picture is stored, copy it, then navigate to
+					<b>/usr/share/xfce4/backdrops</b> and paste it in.)</p>
+
+					<p>If you prefer, you can change the folder location that the <b>Background</b> tab defaults to for choices. For example, if you have a
+					folder called "Wallpapers" under your Home folder, you can tell the system to look there instead. Click the drop-down box next to the word
+					<b>Folder:</b> and pick <b>Other</b> to navigate your way to <b>/home/yourname/Wallpapers</b>. Some people prefer doing this
+					because it eliminates the need to be <b>Administrator</b> when adding new backgrounds.</p>
+
+					<p>There are a few other options associated with the background images. You can choose from different styles to display them in, choose a background
+					color if they do not cover the entire screen, have the backgrounds change after a certain amount of time and whether or not you want to have the
+					same background on each workspace. If you decide to have a different background for each workspace, uncheck the <b>Apply to all
+					workspaces</b> box, pick a wallpaper for the workspace you are on, then drag the window to another workspace and select a new wallpaper for it there.</p>
+
+					<p>Now let's take a look at the <b>Menu</b> tab under <b>Desktop Settings</b>.</p>
+					<p><img src="images/customize/desktop/desktop-04.png"></p>
+
+					<p>Under <b>Desktop Menu</b>, it is asking if you want an applications menu to show up as a choice when you right click on the desktop and whether you
+					want that menu to show the icons for the applications listed, or just their names.</p>
+					<p><img src="images/customize/desktop/desktop-05.png"></p>
+
+					<p>Lastly, under the <b>Icons</b> tab you can change various settings regarding the icons on the desktop - their size, whether to activate them
+					with a single, or double click, etc. Under <b>Default Icons</b> you can choose whether or not to show certain default icons on the desktop.</p>
+					<p><img src="images/customize/desktop/desktop-06.png"></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+	      				<h2><a name="workspaces">Workspace Settings</a></h2>
+	      				<p>If you are new to Linux, the concept of <b>workspaces</b> may be unfamiliar. Basically workspaces are virtual desktops that you can use to
+	      				spread your work over. Linux Lite has two workspaces activated by default, but you can change that to any number you like. If you look to the right
+	      				side of your lower panel you will notice two rectangles. Those are representations of your available workspaces as shown by the
+					<b>Workspaces plugin</b> on the panel.</p>
+	      				<p><img src="images/customize/workspaces/workspaces-01.png"></p>
+
+	      				<p>Workspaces are particularly useful if you tend to have multiple programs open at the same time. For example, if you have two programs running in
+	      				one workspace and want to open a few more, switching to another workspace gives you a fresh, clean desktop to put them on. This cuts down on desktop
+	      				clutter and many find it easier to just switch workspaces rather than fumbling through multiple windows on the same desktop to find the one they
+	      				want. Here are four screenshots that show the difference.</p>
+
+	      				<p><b>First</b> - three program windows opened on same workspace.</p>
+	      				<p><img src="images/customize/workspaces/workspaces-02.png"></p>
+
+	      				<p><b>Next</b> - what you see when you switch to a new workspace.</p>
+	      				<p><img src="images/customize/workspaces/workspaces-03.png"></p>
+
+	      				<p><b>Last</b> - Workspace 1 with only two programs kept on it.</p>
+	     				<p><img src="images/customize/workspaces/workspaces-04.png"></p>
+
+	      				<p><b>And</b> - Workspace 2 with one program moved over to it.</p>
+	      				<p><img src="images/customize/workspaces/workspaces-05.png"></p>
+
+					<p>With your work spread out over more than one workspace everything is easier to see. Depending on your settings, switching between workspaces
+	      				is typically done by either clicking one of the rectangles in the panel, using your mouse wheel while hovering over the rectangles, or using your
+	      				mouse wheel on an empty spot of the desktop to scroll back and forth between workspaces. (Keyboard shortcuts can be used to switch workspaces
+	      				also. These may vary depending on your keyboard layout, but a typical U.S. keyboard has <b>Ctrl+Alt+</b> the <b>Arrow Keys</b> set to move
+	      				between the workspaces.)</p>
+
+	      				<p>There are three areas where workspace settings can be changed. You can right click the <b>Workspaces plugin</b> on the panel and choose
+	      				<b>Properties</b>. That brings up the <b>Workspace Switcher</b> window. Some setting are found there and others appear
+	      				when you subsequently click on <b>Workspace Settings...</b>. In the example below, we will set up four workspaces and have the Workspaces
+	      				plugin display them in two rows instead of one on the panel.</p>
+	      				<p><img src="images/customize/workspaces/workspaces-06.png"></p>
+
+	     				<p>You can also go to the main <b>Settings Manager</b>, choose <b>Workspaces</b> there and that will allow you to change the number
+	      				of workspaces, their names and margins (if desired).</p>
+	      				<p><img src="images/customize/workspaces/workspaces-07.png"></p>
+
+	     				<p><img src="images/customize/workspaces/workspaces-08.png"></p>
+
+	      				<p>Lastly, there are some more workspace settings within the <a href="#tweaks">Window Manager Tweaks</a> section.</p>
+
+	      				<p><a href="#top">Top of page</a></p>
+
+	      				<h2><a name="litewidget">Lite Desktop Widget</a></h2>
+	      				<p>The Lite Desktop Widget is available in Linux Lite 3.2 and above. It's purpose is to give people a basic
+					overview of their system running including:</p>
+
+					<ul class="feature-grid">
+					<li><i> </i>Linux Lite Version</li>
+					<li><i> </i>Date</li>
+					<li><i> </i>CPU usage - average cpu usage across all cores</li>
+					<li><i> </i>Memory Total - total memory installed</li>
+					<li><i> </i>Memory Usage - total memory currently in use</li>
+					<li><i> </i>User currently logged in</li>
+					<li><i> </i>Battery Status (laptops only)</li>
+					<li><i> </i>Firewall Status</li>
+					<li><i> </i>Updates Status</li>
+						</ul><br>
+
+	         			<p>The Lite Desktop Widget is disabled by default. Some people like this kind of information on their Desktop, some don't.</p>
+
+					<p>To enable Lite Widget via the <b>Settings Manage</b>r:</p>
+
+					<p>Go to <b>Menu, Settings, Settings Manager</b>. Click on <b>Lite Widget</b>.</p>
+	      				<p><img src="images/customize/widget/widget-a.png"></p>
+
+	         			<p>Click on <b>Enable Lite Widget</b>.</p>
+	      				<p><img src="images/customize/widget/widget-b.png"></p>
+
+	         			<p>You'll get a confirmation pop-up and you will see <b>Lite Widget</b> appear in the bottom right hand corner of your screen (position may differ on multiple screens). <b>Lite Widget</b> 
+					will now start when your computer starts.</p>
+	      				<p><img src="images/customize/widget/widget-c.png"></p>
+
+	         			<p>To disable <b>Lite Widget</b>, just click on <b>Disable Lite Widget</b>.</p>
+
+
+					<p>To enable Lite Widget via <b>Session and Startup</b>:</p>
+
+					<p>Go to <b>Menu, Settings, Session and Startup, Application Autostart</b> and place a tick in <b>Lite Widget</b>. Logout then Login and the Widget will appear at the bottom right 
+					hand corner of your screen shortly after your Desktop has loaded. To disable the widget, untick <b>Lite Widget</b>. Logout then Login and the Widget will no longer appear.</p>
+	      				<p><img src="images/customize/widget/widget1.png"></p>
+
+	         			<p><b>Updates Status - a reminder to Update your system</b></p>
+	         			<p>There are 4 states of <b>Updates Status</b>. The <b>Updates Status</b> is refreshed once every 5 minutes, so once you have installed updates, it will take 5 minutes to 
+					display the new status in the widget. The widget does not display updates when they are available, it only shows when you last installed updates. For the <b>Updates Status</b> to accurately 
+					display available updates, this would require root access and each user would have to be added to the sudoers file, this is a huge security risk and will not be enabled.</p>
+
+					<p>The first state appears when you complete a fresh install Linux Lite, it will read <b>System never updated</b>. It's at this time that you need to update your system. 
+					Go to <b>Menu, Favorites, Install Updates</b> to update your system.</p>
+	      				<p><img src="images/customize/widget/widget2.png"></p>
+
+	         			<p>Once you have updated for the first time, after 5 minutes the <b>Updates Status</b> will change to <b>Your system was recently updated</b>. This message will also appear 
+					within the first hour, each time you update your system.</p>
+	      				<p><img src="images/customize/widget/widget3.png"></p>
+
+	         			<p>The Lite Desktop Widget will then start displaying your <b>Update Status</b> every <b>hour</b> after the last update, as shown in the image below.</p>
+	      				<p><img src="images/customize/widget/widget4.png"></p>
+
+	         			<p>The Lite Desktop Widget will then start displaying your <b>Update Status</b> every <b>day</b> after the last update, as shown in the image below.</p>
+	      				<p><img src="images/customize/widget/widget5.png"></p>
+
+	         			<p>After the <b>3rd day</b>, the Lite Desktop Widget will then start displaying your <b>Update Status</b> in <b>yellow</b> to remind you that it's time to update your system.</p>
+	      				<p><img src="images/customize/widget/widget6.png"></p>
+
+	         			<p>After the <b>7th day</b>, the Lite Desktop Widget will then start displaying your <b>Update Status</b> in <b>red</b> to remind you that it's time to update your system, <b>urgently</b>.</p>
+	      				<p><img src="images/customize/widget/widget7.png"></p>
+
+	         			<p>Example of Firewall <b>disabled</b> status.</p>
+	      				<p><img src="images/customize/widget/widget8.png"></p>
+
+	      				<p><a href="#top">Top of page</a></p>
+
+	      				<h2><a name="themes">Themes &amp; Icon sets</a></h2>
+	      				<p>The default theme for Linux Lite is <b>Adapta</b>. The default icon set is <b>Papirus-Adapta</b>.
+	         			There are some additional Theme and Icon sets in Linux Lite. Go to <b>Menu, Settings, Settings Manager</b>.
+		 			There are 2 main areas in the Settings Manager that take care of these settings - <b>Appearance</b> and <b>Window Manager</b>.</p>
+	      				<p><img src="images/customize/themes/themes-01.png"></p>
+
+	      				<p>Click on <b>Appearance</b>. Here you will see the <b>Style</b> and <b>Icons</b> tab.</p>
+	      				<p><img src="images/customize/themes/themes-02.png"></p>
+
+	      				<p><img src="images/customize/themes/themes-03.png"></p>
+
+	      				<p>As you click through the various themes and icon sets you will notice visual changes on your computer.</p>
+		 			<p>Click <b>All Settings</b> to get back to the main <b>Settings Manager</b> window; then select <b>Window Manager</b>. The
+		 			<b>Style</b> tab will display available themes that tweak the look of open window frames and the minimize/maximize/close buttons in the windows.</p>
+		 			<p><img src="images/customize/themes/themes-04.png"></p>
+
+		 			<p>Click through some of the choices to see how things change. Go back to the <b>Appearance</b> settings, pick a new theme, then come back to
+		 			the <b>Window Manager</b> settings and go through choices again. You may notice that the <b>Window Manager</b> settings look slightly
+		 			different depending on which <b>Appearance</b> theme you choose. Experiment with different combinations to find one you like.</p>
+
+		 			<p>Close <b>Settings Manager</b> before moving onto the next part of this tutorial.</p>
+
+	      				<p>This next section will show you how to apply new themes and icons.</p>
+
+	      				<p><a href="#top">Top of page</a></p>
+
+	      				<h2><a name="apply_theme">Applying a new Theme</a></h2>
+	      				<p>Head over to the <a href="http://xfce-look.org/" target="_blank">XFCE Look</a> website and choose theme of your liking.</p>
+
+	      				<p><b>NOTE: Not all themes from there will work as you would expect. Please read all of the documentation before attempting to apply a new theme. Some make
+		 			installation easy via a PPA, which is a preferable method to the one shown here. Click <a href="software.html#ppa">here</a> for more information on how to install
+		 			a new PPA. Whichever theme you choose, make sure that it mentions XFCE compatibility.</b></p>
+
+	      				<p>The first thing we need to do is open up our home folder. Click on <b>View, Show Hidden Files</b>. Right click somewhere in your home folder, <b>Create Folder</b>, make
+		 			a folder called <b>.themes</b> (you will only need to do this once). This is where we will copy the new theme to.</p>
+	      				<p><img src="images/customize/themes/themes-05.png"></p>
+
+	      				<p>Download a theme of your choosing. In this example we will choose
+					the <a href="https://www.xfce-look.org/p/1016679/" target="_blank">Axiom</a> theme.</p>
+
+	      				<p><b>NOTE: Each theme may come with a specific set of install instructions. If they do, please follow those instructions.</b></p>
+
+	      				<p>Next, extract the theme you just downloaded (right click, <b>Extract Here</b>).</p>
+	      				<p><img src="images/customize/themes/themes-06.png"></p>
+
+	      				<p>Copy the Axiom themes folder to the <b>.themes</b> folders in your home folder.</p>
+	      				<p><img src="images/customize/themes/themes-07.png"></p>
+	      				<p>Now go to <b>Menu, Settings, Settings Manager</b>. There are 2 places we need to apply the new theme:  <b>Appearance</b> and <b>Window Manager</b>.</p>
+	      				<p><img src="images/customize/themes/themes-01.png"></p>
+
+	      				<p>First, we'll click into <b>Appearance</b>. Select <b>Axiom</b> from the list.</p>
+	      				<p><img src="images/customize/themes/themes-08.png"></p>
+
+	      				<p>Click on <b>All Settings</b> in the bottom right to go back to the <b>Settings Manager</b>.</p>
+		 			<p>Now click into <b>Window Manager</b> and select <b>Axiom</b>. The new theme may not display properly until you log out
+			 		and back in again, so do that now. Click <b>Menu, Log Out</b>. Then log in again.</p>
+
+		 			<p><b>After</b> logging back in again, the theme is correctly applied.</p>
+	      				<p><img src="images/customize/themes/themes-09.png"></p>
+
+	      				<p><a href="#top">Top of page</a></p>
+
+	      				<h2><a name="apply_icon">Applying a new Icon set</a></h2>
+	      				<p>Head over to the <a href="https://xfce-look.org/" target="_blank">XFCE Look</a> website and choose
+					an <a href="https://www.gnome-look.org/browse/cat/132/" target="_blank">Icon set</a> of your liking.</p>
+
+	      				<p><b>NOTE: Not all icon sets from there will work as you would expect. Please read all of the documentation before attempting to apply a new icon set. Some
+					may make installation easy via a PPA, which is a preferable method to the one shown here. Click <a href="software.html#ppa">here</a> for more information on how to
+		 			install a new PPA.</b></p>
+
+	      				<p>The first thing we need to do is open up our home folder. Click on <b>View, Show Hidden Files</b>. Right click somewhere in your home
+					folder, <b>Create Folder</b>, make a folder called <b>.icons</b> (you will only need to do this once). This is where we will copy the new Icon set to.</p>
+	      				<p><img src="images/customize/icons/icons-01.png"></p>
+
+	      				<p>Download an icon set of your choosing. In this example we will choose the
+					<a href="https://www.xfce-look.org/p/1209330/" target="_blank">Zafiro Icon Set</a>.</p>
+
+	      				<p><b>NOTE: Each icon set may come with a specific set of install instructions. If they do, please follow those instructions.</b></p>
+
+	      				<p>Next, extract the icon set you just downloaded (right click, <b>Extract here</b>).</p>
+	      				<p><img src="images/customize/icons/icons-02.png"></p>
+
+	      				<p>Copy the icon set folder to the <b>.icons</b> folder in your home folder.</p>
+	      				<p><img src="images/customize/icons/icons-03.png"></p>
+
+	      				<p>Open <b>Settings Manager</b> click into <b>Appearance, Icons</b>. Select <b>Zafiro-icons</b> from the list.</p>
+	      				<p><img src="images/customize/icons/icons-04.png"></p>
+
+	      				<p>Log out and then log in again to see your new icon theme.</p>
+	      				<p><img src="images/customize/icons/icons-05.png"></p>
+	      				<p><img src="images/customize/icons/icons-06.png"></p>
+
+	      				<p><a href="#top">Top of page</a></p>
+
+	      				<h2><a name="mouse_theme">Applying a new Mouse (Cursors) theme</a></h2>
+					<p>Head over to the <a href="https://www.xfce-look.org/browse/cat/107/ord/latest/" target="_blank">XFCE Look</a> website and choose a <b>Cursors</b> theme of your liking.</p>
+
+	      				<p><b>NOTE: Not all themes from there will work as you would expect. Please read all of the documentation before attempting to apply a new theme. Some make
+		 			installation easy via a PPA, which is a preferable method to the one shown here. Click <a href="software.html#ppa">here</a> for more information on how to install
+		 			a new PPA. Whichever theme you choose, make sure that it mentions XFCE compatibility.</b></p>
+
+	      				<p>The first thing we need to do is open up our home folder. Click on <b>View, Show Hidden Files</b>. Right click somewhere in your home folder, <b>Create Folder</b>, make
+		 			a folder called <b>.icons</b> if it does not already exist. (You will only need to do this once). This is where we will copy the new theme to.</p>
+	      				<p><img src="images/customize/icons/icons-01.png"></p>
+
+	      				<p>Download a mouse theme of your choosing. In this example we will choose the
+					<a href="http://xfce-look.org/content/show.php/Ecliz?content=110340" target="_blank">Ecliz mouse theme</a>.</p>
+
+	      				<p><b>NOTE: Each icon set may come with a specific set of install instructions. If they do, please follow those instructions.</b></p>
+
+	      				<p>Next, extract the icon set you just downloaded (right click, <b>Extract here</b>).</p>
+	      				<p><img src="images/customize/mouse/mouse-theme-01.png"></p>
+
+	      				<p>Copy the extracted mouse theme folder to the <b>.icons</b> folder in your home folder. Then open the <b>Settings Manager</b> and
+	      				open the <b>Mouse and Touchpad</b> settings. Click the <b>Theme</b> tab and you will find your new theme there. Click to select
+	      				it and your mouse will immediately change.</p>
+	      				<p><img src="images/customize/mouse/mouse-theme-02.png"></p>
+
+	      				<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="panel">Customize your Panel Bar</a></h2>
+					<p>The panel bar along the bottom of your screen, (with your Menu and various indicator icons on it), can be customized in a variety of ways. Its
+					position and size can be changed. Launchers and plugins can be added to it. You can even have multiple panels if you want to position certain items
+					on different parts of the screen. To get started, right click on an empty area of the panel and select <b>Panel, Panel Preferences</b>.</p>
+					<p><img src="images/customize/panel/panel1.png"></p>
+
+					<p>A <b>Panel</b> window will pop up where you can make your changes. The <b>Display</b> tab lets you choose to have the panel displayed
+					horizontally, vertically, or as a deskbar on the screen. You can choose to auto-hide the panel or not, change its length and width and move it to the top,
+					bottom, or either side of the screen.</p>
+					<p><img src="images/customize/panel/panel2.png"></p>
+
+					<p>To move the panel you need to first unlock it, then you will see handles appear on either end of the panel that you can grab with your mouse to
+					move it. Here is a close-up showing what the handles look like:</p>
+					<p><img src="images/customize/panel/panel3.png"></p>
+
+					<p>The <b>Appearance</b> tab lets you choose a style for the panel, adjust the transparency (alpha) of the panel, or adjust the opacity of the
+					panel depending on whether your mouse is pointing at it or not. ("Compositing" needs to be enabled in order to change transparency and opacity settings.
+					See the <a href="#tweaks">Window Manager Tweaks</a> section for how to do that.)</p>
+					<p><img src="images/customize/panel/panel4.png"></p>
+
+					<p>The <b>Items</b> tab is where you go to add things like launchers, plugins and separators to the panel. Items on the panel are listed on the left
+					and the buttons on the right allow you to change their position on the panel (up/down arrows), add (+) or delete (-) items, and edit details for them if
+					necessary. As you do that, you can see the changes take immediate effect on the panel.</p>
+					<p><img src="images/customize/panel/panel5.png"></p>
+
+					<p>Notice above that I created several launchers by using the <b>+</b> button, which opens an <b>Add New Items</b> window. That window
+					is where you can choose to add launchers, separators, and plugins that are available for the panel.</p>
+					<p><img src="images/customize/panel/panel6.png"></p>
+
+					<p>When you are done adding things, close the <b>Add New Items</b> window to get back to the <b>Items</b> tab of the <b>
+					Panel</b> window. To assign a program to a launcher, highlight the launcher item and click the button for "Edit the currently selected item".</p>
+					<p><img src="images/customize/panel/panel7.png"></p>
+
+					<p>That will bring up the <b>Launcher</b> window.</p>
+					<p><img src="images/customize/panel/panel8.png"></p>
+
+					<p>Hit the <b>+</b> button to bring up a list of programs to choose from.</p>
+					<p><img src="images/customize/panel/panel9.png"></p>
+
+					<p>As an example, below is a panel with the <b>New Document</b> launcher added.</p>
+					<p><img src="images/customize/panel/panel10.png"></p>
+
+					<p><b>Creating a multi-level launcher,</b> (giving you a choice to start more than one program from a single launcher), is done in the same
+					manner as just described. The only difference is that you add more than one item to the same launcher. One might prefer to make a launcher menu instead
+					of separate launchers to save space on the panel and/or to group similar types of programs.</p>
+					<p><img src="images/customize/panel/panel11.png"></p>
+
+					<p>In our example, the <b>New Document</b> has a small arrow to the right of its icon. We'll add a <b>New Spreadsheet</b> launcher using the <b>+</b> button. Here is what the <b>Launcher</b> 
+					window looks like after adding the <b>New Spreadsheet</b> launcher.</p>
+					<p><img src="images/customize/panel/panel12.png"></p>
+
+					<p>If you need a more detailed description of the procedure to create a multi-level launcher, please see
+					<a href="https://www.linuxliteos.com/forums/index.php?topic=1294.0" target="_blank">this tutorial</a> on our forum. The tutorial also describes
+					some advanced tips like changing the position of the arrow on the launcher.</p>
+
+					<p><b>Creating additional panels</b> is easy to do. From the <b>Panel Preferences</b> window, click the <b>+</b> sign along the top next to the <b>Panel 1</b> box.</p>
+					<p><img src="images/customize/panel/panel13.png"></p>
+
+					<p>Now you will have a new (empty) panel showing on the desktop and the <b>Panel Preferences</b> window will show <b>Panel 2</b> along
+					the top. With <b>Panel 2</b> showing, you can now go about setting your preferences for the new panel under the <b>Display, Appearance</b>
+					and <b>Items</b> tabs. It is unlocked from the start so you can drag and place it where you like on the screen.</p>
+					<p><img src="images/customize/panel/panel14.png"></p>
+
+					<p>There are many more panel plugins available for installation than those pre-installed with Linux Lite. Have a look on
+					<a href="http://goodies.xfce.org/projects/panel-plugins/start" target="_blank">this XFCE site</a> for a comprehensive list of panel plugins that
+					are available in the repositories. They are listed with their real package names, so you can easily use the search function in the <b>Synaptic Package
+					Manager</b> (found at <b>Menu, System, Install/Remove Software</b>) to find and install any that interest you.</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="tweaks">Window Manager Tweaks</a></h2>
+					<p>Select <b>Window Manager Tweaks</b> in the main <b>Settings Manager</b> window.</p>
+					<p><img src="images/customize/tweaks/tweaks-01.png"></p>
+
+					<p><b>Window Manager Tweaks</b> are an assortment of other settings you can change that effect window behavior. They are organized
+					under the tabs: Cycling, Focus, Accessibility, Workspaces, Placement and Compositor. We will just touch on a few of these settings here. The rest
+					you can browse through at your leisure.</p>
+
+					<p>The <b>Compositor</b> tab is of particular importance. It is here that you need to enable compositing if you plan to add transparency or opacity
+					effects to your windows and/or panel(s).</p>
+					<p><img src="images/customize/tweaks/tweaks-02.png"></p>
+
+					<p>Check the box to <b>Enable display compositing</b>. Now you can access various transparency settings for windows as well as enable some
+					shadow effects. Here is an example showing the opacity of inactive windows changed. Notice that the window in the background is now slightly faded.</p>
+					<p><img src="images/customize/tweaks/tweaks-03.png"></p>
+
+					<p><img src="images/customize/tweaks/tweaks-04.png"></p>
+
+					<p>Back on <b>Window Manager Tweaks</b>, click on the <b>Workspaces</b> tab. Here you have a few more settings that control interacting with your workspaces.</p>
+					<p><img src="images/customize/tweaks/tweaks-05.png"></p>
+
+					<p>The options are pretty self explanatory. The last two options allow you to use your mouse to drag a window off one of the screen edges on to another workspace.</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+				</div>
+				<div class="clear"> </div>
+			</div>
+		</div>
+		<div class="clear"> </div>
+	</div>
+</body>
+</html>

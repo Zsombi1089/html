@@ -1,0 +1,24 @@
+facebook:
+on:0 0
+hover:0 -30
+
+twitter:
+on: -30 0
+hover: -30 -30
+
+reddit:
+on: -60 0
+hover: -60 -30
+
+instagram:
+on: -90 0
+hover: -90 -30
+
+youtube:
+on: -120 0
+hover: -120 -30
+
+linkedin:
+on: -150 0
+hover: -150 -30
+

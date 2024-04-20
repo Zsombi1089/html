@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Help Manual - Tutorials</title>
+<meta name="description" content="Description to go here." />
+<!-- jQuery-->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/code.css" rel="stylesheet" type="text/css" media="all" />
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<!--fonts-->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<style>
+b    {font-weight: 400;}
+ </style>
+<style>
+i    {font-style: italic;}
+ </style>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+<style>.highlight { background: #FFFF40; }</style>
+<script type="text/javascript" src="js/highlight.js"></script>
+
+</head>
+<body onload="highlight();">
+	<div class="header">
+		<div class="header-left header-left1">
+			<div class="logo">
+				<center><a href="index.html"><img src="images/logo.png" alt=""></a></center>
+			</div>
+			<div class="top-nav">
+				<ul >
+					<li  ><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li class="active"><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black1" > GLOSSARY</a></li>
+				</ul>
+			</div>
+			<ul class="social-in">
+				<li><a href="https://www.facebook.com/linuxliteos" target="_blank"><i class="facebook"> </i></a></li>
+				<li><a href="https://twitter.com/linuxlite" target="_blank"><i class="twitter"> </i></a></li>
+				<li><a href="https://www.reddit.com/r/LinuxLite/" target="_blank"><i class="reddit"> </i></a></li>			
+			</ul>
+		</div>
+		<!---->
+		<div class="header-top">
+			<div class="logo-in">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="top-nav-in">
+			<span class="menu"><img src="images/menu.png" alt=""> </span>
+				<ul >
+					<li  ><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li class="active"><a href="glossary.html" class="black1" > GLOSSARY</a></li>
+				</ul>
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav-in ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+
+			</div>
+			<div class="clear"> </div>
+		</div>
+			<!---->
+		<div class="content">
+			<div class="about">
+				<div class="about-top">
+					<div class="grid-about">
+					</div>
+					
+					<p><a href="#antivirus">AntiVirus</a> - scan your system for viruses.<br />
+            				<a href="#filesearch">File search</a> - a file and folder search utility.<br />
+            				<a href="#firewall">FireWall</a> - basic set up and configuration.<br />
+            				<a href="#timeshift">Timeshift</a> - a System Restore utility.<br />
+            				<a href="#timeshiftcreate">Timeshift</a> - Creating a Restore Point.<br />
+            				<a href="#timeshiftrestore">Timeshift</a> - Restoring a backup.<br />
+            				<a href="#usbpers">USB Persistence</a> - Install Linux Lite to a USB device.<br />
+            				<a href="#vbox">VirtualBox</a> - use a virtual environment to run other operating systems within Linux Lite.</p>
+            				
+			<!-- Offline Search feature - Start -->            				
+            				
+					<div class="block" style="padding-top: 39px;">
+
+					<form id="tipue_search" action="search.html">
+					<input type="text" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search terms" required>
+					<input type="image" id="search" name="" src="images/search.png" class="tipue_button search" alt="Search"><br><br>
+
+					<label for="tipue_per_page">Results per page:</label>
+					<select name="per_page" id="tipue_per_page">
+					<option value="7">7</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					</select><br><br>
+					<fieldset style="border:none;">
+					<legend style="display:inline;">Match:</legend><br>
+					<input type="radio" name="matchtype" id="any" value="0" checked="checked"><label for="any"> any search terms</label> &nbsp; <input type="radio" name="matchtype" id="all" value="1"><label for="all"> all search terms</label><br><br>
+					<p>TIP: For optimal results, only search for one or two words eg. <i>printer</i> instead of <i>how do I install a printer</i></p><br>
+					</fieldset>
+					</form></div>
+
+					<div id="tipue_search_content"><div class="tipue_search_rect1"></div><div class="tipue_search_rect2"></div><div class="rect3"></div></div>
+					
+			<!-- Offline Search feature - End -->
+
+           				<p><h2>General Information</h2></p>
+					<p>This page is a work in progress. Over time more tutorials will be added to it. Some of them may deal with software that is already included in the
+					standard Linux Lite installation. Many will be for software that needs to be installed first because it is not part of the standard installation.</p>
+
+					<p>What you will see when installing from <b>Menu, Settings, Lite Software.</b></p>
+					<p><img src="images/software/litesoftware/liteinstsoft1.png" /></p>
+
+					<p>Lite Software below. Learn how to use it <a href="software.html#installsoftware">here</a>.</p>
+					<p><img src="images/software/litesoftware/liteinstsoft6.png" /></p>
+
+					<p>What you will see when installing from <b>Menu, System, Package Manager</b> (Synaptic Package Manager).</p>
+					<p><img src="images/software/insoft/menu_synaptic.png" /></p>
+
+					<p>The Synaptic Package Manager below. Learn how to use it <a href="software.html#instsoftware">here</a>.</p>
+					<p><img src="images/software/insoft/synaptic_search.png" /></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<p><h2><a name="antivirus">AntiVirus</a></h2></p>
+
+					<p>Viruses can occur on any computer system. The following tutorial is a collection of commands that allows you to scan your entire system for viruses.</p>
+
+					<p>Install the virus scanner:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo apt-get install clamav clamav-daemon</code></pre><br>
+
+					<p>Download the latest virus definitions:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo freshclam</code></pre><br>
+
+					<p>If you get the following error in your terminal:</p>
+
+						<div class="codeheader">Terminal:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">ERROR: /var/log/clamav/freshclam.log is locked by another process</code></pre><br>
+
+					<p>Run the following command in your terminal:</p>
+
+						<div class="codeheader">Terminal:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo rm -rf /var/log/clamav/freshclam.log</code></pre><br>
+
+					<p>Then run the following command again in your terminal:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo freshclam</code></pre><br>
+
+					<p>Once your virus database is up to date, proceed to scan your system for viruses:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo clamscan -r -i / | grep FOUND >> /home/youruser/virus-scan-report.txt</code></pre><br>
+
+					<p>Where <b>youruser</b> is your username.</p>
+					<p>The scan will take anywhere from several minutes to several hours, depending on how many files there are to scan.</p>
+
+					<p>To just scan your home folder, run the following:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">clamscan -r -i /home/youruser/ | grep FOUND >> /home/youruser/virus-scan-report.txt</code></pre><br>
+
+					<p>Where <b>youruser</b> is your username.</p>
+
+					<p>When the scan has finished, open the <b>virus-scan-report.txt</b> in your home folder and look to see where any viruses may be residing:</p>
+
+					<p><img src="images/tutorials/antivirus/antivirus1.png" /></p>
+
+					<p>You can then go into the folder where the virus was found and delete it.</p>
+
+					<p>Be sure to run the following command in your terminal before running a new virus scan to ensure your virus definitions are up to date:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo freshclam</code></pre><br>
+
+					<p>Then run your new virus scan.</p>
+
+					<p><h2><a name="firewall">FireWall</a></h2></p>
+
+					<p>A firewall is a piece of software that determines what network traffic can flow between your computer and your local network and internet.</p>
+
+					<p><b>By default, the Firewall is disabled in Linux Lite</b>.</p>
+
+					<p>How a Firewall works:</p>
+					<p>NETWORK TRAFFIC COMING INTO YOUR PC >>> HITS THE FIREWALL >>> FIREWALL SEES IF THERE IS AN EXISTING RULE TO LET THAT TRAFFIC THROUGH.</p> 
+					<p>IF THERE IS A RULE, LET IT THROUGH. IF THERE IS NOT A RULE, BLOCK IT.</p>
+
+					<p>To enable the firewall:</p>
+
+					<p>Click on <b>Menu, Settings, Settings Manager</b>. Now click on <b>Firewall Config</b>.</p>
+					<p><img src="images/tutorials/firewall/firewall-a.png" /></p>
+
+					<p>Enter your password.</p>
+					<p><img src="images/tutorials/firewall/firewall-b.png" /></p>
+
+					<p>Click on the <b>Show Status</b> button.</p>
+					<p><img src="images/tutorials/firewall/firewall-c.png" /></p>
+
+					<p>Firewall shows as <b>Disabled</b>.</p>
+					<p><img src="images/tutorials/firewall/firewall-d.png" /></p>
+
+					<p>Click on the <b>Enable Firewall</b> button.</p>
+					<p><img src="images/tutorials/firewall/firewall-c.png" /></p>
+
+					<p>The Firewall will go through the start up process.</p>
+					<p><img src="images/tutorials/firewall/firewall-e.png" /></p>
+
+					<p>Click <b>OK</b> to finish.</p>
+					<p><img src="images/tutorials/firewall/firewall-f.png" /></p>
+
+					<p>The Firewall now shows as <b>Enabled</b>.</p>
+					<p><img src="images/tutorials/firewall/firewall-g.png" /></p>
+
+					<p>The same application can be used to disable the Firewall, just follow the above steps and choose <b>Disable Firewall</b> instead.</p>
+
+
+					<p>To enable the firewall in the Terminal:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo systemctl unmask --now firewalld</code></pre><br>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo systemctl enable firewalld</code></pre><br>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo systemctl start firewalld</code></pre><br>
+
+					<p>The following command shows the status of your firewall:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo firewall-cmd --state</code></pre><br>
+
+					<p>With the Firewall enabled, Linux Lite let's through the everyday traffic by default, for example, internet and mail. If you want for example to use DropBox, you will 
+					need to make sure it has been ticked in the Services tab, and the relevant ports have been added. Torrent applications and their accompanying ports will also need to be ticked and added to function properly.</p>
+
+					<p>If you have a firewall elsewhere on your network (like most routers do) then you can disable the firewall permanently by doing the following:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo systemctl stop firewalld</code></pre><br>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo systemctl disable firewalld</code></pre><br>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo systemctl mask --now firewalld</code></pre><br>
+
+					<p><b>A list of common ports to work with an Enabled Firewall</b>:</p>
+					<p><b>Teamviewer</b> - 5938 - TCP & UDP</p>
+					<p><b>NitroShare</b> - 40818 - TCP & 40816 UDP</p>
+					<p><b>Printing (Network)</b> - 5353 (mDNS) UDP, 631 (IPP/IPPS) TCP, 9100-9102 (AppSocket/JetDirect) - TCP</p>
+					<p>More will be added here over time.</p>
+
+					<p>Most common firewall applications are included in FirewallD, they just need to be ticked (enabled). Check the existing lists in FirewallD before adding your own rules.</p>
+
+					<p><b>You must enable the Firewall by the Terminal first (see above)</b>.</p>
+
+					<p>Click on <b>Menu, Settings, Firewall</b>.</p>
+					<p><img src="images/tutorials/firewall/firewall-1.png" /></p>
+
+					<p>Enter your password.</p>
+					<p><img src="images/tutorials/firewall/firewall-2.png" /></p>
+
+					<p>Select <b>Configuration, Permanent</b> before you attempt any type of firewall adjustments.</p>
+					<p><img src="images/tutorials/firewall/firewall-3.png" /></p>
+
+					<p>Click on <b>Options</b> in the main menu, <b>Change Default Zone</b>.</p>
+					<p><img src="images/tutorials/firewall/firewall-4.png" /></p>
+
+					<p>Select <b>home</b> from the pop up box, then click on OK.</p>
+					<p><img src="images/tutorials/firewall/firewall-5.png" /></p>
+
+					<p>We're now set up for home firewall configuration.</p>
+					<p><img src="images/tutorials/firewall/firewall-6.png" /></p>
+
+					<p>Now that we're all set up, let's show you how to allow ports through to your computer.</p>
+					<p>In the following example, we'll use SSH, a common protocol for remotely connecting to another computer.</p>
+
+					<p><b>Adding a port to an EXISTING service</b></p>
+
+					<p>Make sure <b>Configuration</b> is set to <b>Permanent</b> and your Zone is set to <b>home</b> or your changes will not stick.</p>
+					<p>Most SSH servers run on port <b>22</b> but this also means that is someone is trying to hack you, this is the first port they will try to attack you on. A clever Server 
+					Admin would change this port number before letting the SSH server go live. Let's say it gets changed to Port <b>6860</b> for this example.</p>
+
+					<p>Click on the <b>Services</b> tab and select <b>ssh</b> from the left pane. Then click on <b>+Add</b> at the bottom.</p>
+					<p><img src="images/tutorials/firewall/firewall-7.png" /></p>
+
+					<p>Enter in the port number, then click on OK.</p>
+					<p><img src="images/tutorials/firewall/firewall-8.png" /></p>
+
+					<p>Enter your password.</p>
+					<p><img src="images/tutorials/firewall/firewall-9.png" /></p>
+
+					<p>Port <b>6860</b> has now been added. The server admin should now remove port <b>22</b> by selecting it and clicking on the <b>-Remove</b> button. 
+					Click on <b>Options, Reload Firewalld</b> to activate our new firewall rule, enter your password if prompted.</p>
+					<p><img src="images/tutorials/firewall/firewall-10.png" /></p>
+
+
+					<p><b>Adding a NEW service</b></p>
+
+					<p>Make sure <b>Configuration</b> is set to <b>Permanent</b> and your Zone is set to <b>home</b> or your changes will not stick.</p>
+					<p>In this example, we'll set up a fictitious server and port. Let's call it <b>ACME</b> with port numbers <b>4545 and 4546</b> (both using the <b>tcp</b> protocol).</p>
+
+					<p>Click on the <b>Services</b> tab and click the <b>+</b> sign as shown below.</p>
+					<p><img src="images/tutorials/firewall/firewall-11.png" /></p>
+
+					<p>Enter in similar details as you would for your application below.</p>
+					<p><img src="images/tutorials/firewall/firewall-12.png" /></p>
+
+					<p><b>ACME</b> is now added to the application list. Now we just need to add the two ports.</p>
+					<p><img src="images/tutorials/firewall/firewall-13.png" /></p>
+
+					<p>Click on <b>Add</b> in the <b>Ports</b> tab and enter in the ports.</p>
+					<p><img src="images/tutorials/firewall/firewall-14.png" /></p>
+
+					<p>Enter the port numbers. To make it easy here, just add one at a time.</p>
+					<p><img src="images/tutorials/firewall/firewall-15.png" /></p>
+					<p><img src="images/tutorials/firewall/firewall-15a.png" /></p>
+
+					<p>Here our application <b>ACME</b> and it's ports number are all set to go.</p>
+					<p><img src="images/tutorials/firewall/firewall-16.png" /></p>
+
+					<p>Click on the <b>Services</b> tab and place a tick in <b>ACME</b>.</p>
+					<p>Click on <b>Options, Reload Firewalld</b> to activate our new firewall rule, enter your password if prompted.</p>
+					<p><img src="images/tutorials/firewall/firewall-17.png" /></p>
+
+					<p>Our new Firewall rule is now set up to work properly.</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<p><h2><a name="timeshift">Timeshift</a></h2></p>
+
+					<p>Timeshift is a system restore tool for Linux. It provides functionality that is quite similar to the System Restore feature in Windows or the Time Machine tool in MacOS. 
+					Timeshift protects your system by making incremental snapshots of the file system manually or at regular automated intervals.</p>
+
+					<p>These snapshots can then be restored at a later point to undo all changes to the system and restore it to the previous state. Snapshots are made using rsync 
+					and hard-links and the tool shares common files amongst snapshots in order to save disk space. Now that we have an idea about what Timeshift is, let us take take a 
+					detail look at setting up and using this tool.</p>
+
+					<p>Go to <b>Menu, System, System Restore Utility.</p>
+					<p><img src="images/tutorials/timeshift/timeshift1.png" /></p>
+
+					<p>Enter your password.</p>
+					<p><img src="images/tutorials/timeshift/timeshift2.png" /></p>
+
+					<p>Timeshift supports 2 snapshot formats. The first is by using <b>Rsync</b> and the second is by using the in-built features of <b>BTRFS</b> file system that allows snapshots to be created. 
+					Most peoples choice will be <b>Rsync</b> unless you chose the <b>BTRFS</b> file system during your Linux Lite installation. Select <b>Rsync</b> and click on the <b>Next</b> button.</p>
+					<p><img src="images/tutorials/timeshift/timeshift3.png" /></p>
+
+					<p>The next thing to do is select your snapshot location. You can choose to have your snapshots on your local disk or on an external storage device. 
+					Wherever you choose, make sure you have at least 100Gb plus of spare storage. An external hard drive is an wise choice. In the following example, <b>sda5</b> is our 
+					backup location, <b>sda1</b> is our Linux Lite partition. Click on the <b>Next</b> button.</p>
+					<p><img src="images/tutorials/timeshift/timeshift4.png" /></p>
+
+					<p>Timeshift allows you to create snapshots on hourly, daily, weekly, monthly or on boot basis. So you can select the frequencies you want and the number of snapshots to keep.</p>
+					<p><img src="images/tutorials/timeshift/timeshift5.png" /></p>
+
+					<p><img src="images/tutorials/timeshift/timeshift6.png" /></p>
+					<p>Click on <b>Finish</b> to complete your setup.</p>
+
+					<p><b><a name="timeshiftcreate">Creating a Restore Point</a></b></p>
+
+					<p>Creating a snapshot is simple. Just click on the <b>Create</b> button and your first snapshot will be created. Depending on what should be included or excluded 
+					from the snapshots, it will take several minutes for the process to complete.</p>
+					<p><img src="images/tutorials/timeshift/timeshift7.png" /></p>
+					<p><img src="images/tutorials/timeshift/timeshift8.png" /></p>
+
+					<p>You can add comments to your snapshots so you can have a description of the snapshot.</p>
+					<p><img src="images/tutorials/timeshift/timeshift9.png" /></p>
+
+					<p><b>Settings, Filters</b></p>
+					<p>You can also specify <b>Filters</b> to include or exclude files or directories from the snapshots. Timeshift is designed to protect system files and settings. User data such 
+					as documents, pictures and music are excluded by default. This prevents you from overwriting your documents when you restore a snapshot or using all of your 
+					storage to backup media (pictures, music, and video) files. We recommend you use the <b>Backups</b> application in the <b>Accessories</b> menu for your <b>home</b> folder 
+					backups, and use <b>Timeshift</b> for system backups, the choice is yours.</p>
+					<p><img src="images/tutorials/timeshift/timeshift10.png" /></p>
+
+					<p>Clicking on the <b>Summary</b> option under <b>Filters</b> will show you what is included and what is not.</p>
+					<p><img src="images/tutorials/timeshift/timeshift11.png" /></p>
+
+					<p><b><a name="timeshiftrestore">Restoring a backup</a></b></p>
+
+					<p>Restoring a Backup is as simple as selecting the snapshot you wish to restore and clicking on the <b>Restore</b> button.</p>
+					<p><img src="images/tutorials/timeshift/timeshift12.png" /></p>
+
+					<p>Next you will select your target device where files will be restored. You will have to specify your root device and whether or not to keep the boot and 
+					home files on the root device or on another partition.</p>
+					<p><img src="images/tutorials/timeshift/timeshift13.png" /></p>
+
+					<p>You then specify the <b>Bootloader Options</b> as to whether or not to reinstall GRUB2, to update or not intramfs and the Grub Menu.</p>
+					<p><img src="images/tutorials/timeshift/timeshift14.png" /></p>
+
+					<p>Timeshift will then simulate a Restore by performing a 'Dry run'. This takes place to ensure the Restore process runs without error.</p>
+					<p><img src="images/tutorials/timeshift/timeshift15.png" /></p>
+
+					<p>On the <b>Confirm Actions</b> window click on <b>Next</b>.</p>
+					<p><img src="images/tutorials/timeshift/timeshift16.png" /></p>
+
+					<p>The next window is a <b>Warning</b> dialogue that gives you a summary of the Restore process. Click on <b>Next</b>.</p>
+					<p><img src="images/tutorials/timeshift/timeshift17.png" /></p>
+
+					<p>The Restore process begins. This may take some time.</p>
+					<p><img src="images/tutorials/timeshift/timeshift18.png" /></p>
+
+					<p>​The snapshot will be applied and then your computer will restart to complete the process.</p>
+					
+					<p>Many thanks to <a href="http://www.linuxandubuntu.com" target=_blank">Mohd Sohail of LinuxAndUbuntu.com</a> for help with this tutorial.</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<p><h2><a name="usbpers">USB Persistence</a></h2></p>
+					<p>USB Persistence enables the user to have a USB device with Linux Lite installed onto it, that can then be rebooted and all the files and settings are still available.</p>
+					<p>The following tutorial will walk you through how to install Linux Lite to a USB device.</p>
+
+					<p>We will use <b>mkusb</b> to create our persistent USB.</p>
+
+					<p>First, we install the <b>mkusb</b> PPA. Complete one line at a time.</p>
+					<p><b>NOTE:</b> Installing this will remove <b>USB Image Writer</b> and <b>USB Stick Formatter</b>.</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo add-apt-repository ppa:mkusb/ppa<br>sudo apt install --install-recommends mkusb mkusb-nox usb-pack-efi</code></pre><br>
+
+					<p>Launch <b>mkusb, Menu, System, mkusb</b>.</p>
+					<p><img src="images/tutorials/usbpers/usbpers-01.png" /></p>
+
+					<p>Click on <b>Yes</b> for the dialogue box.</p>
+					<p><img src="images/tutorials/usbpers/usbpers-02.png" /></p>
+
+					<p>Enter your password.</p>
+					<p><img src="images/tutorials/usbpers/usbpers-03.png" /></p>
+
+					<p>Click on <b>OK</b> for the next box.</p>
+					<p><img src="images/tutorials/usbpers/usbpers-04.png" /></p>
+
+					<p>Select <b>Install (make a boot device)</b> and click on <b>OK</b>.</p>
+					<p><img src="images/tutorials/usbpers/usbpers-05.png" /></p>
+
+					<p>Select <b>'Persistent live' - only Debian and Ubuntu</b> and click on <b>OK</b>.</p>
+					<p><img src="images/tutorials/usbpers/usbpers-06.png" /></p>
+
+					<p>Select the Linux Lite ISO image file.</p>
+					<p><img src="images/tutorials/usbpers/usbpers-07.png" /></p>
+
+					<p>Make sure the correct USB device is listed and selected and click on <b>OK</b>.</p>
+					<p><img src="images/tutorials/usbpers/usbpers-08.png" /></p>
+
+					<p>Select <b>msdos</b> from the list and click on <b>OK</b>. You will need to select <b>upefi</b> if you are using one of our UEFI installs on your UEFI computer.</p>
+					<p><img src="images/tutorials/usbpers/usbpers-09.png" /></p>
+
+					<p>Adjust the slider to your preferences or just accept the default persistence space.</p>
+					<p>This is the space where your settings and files will be saved to so make sure to give it adequate space.</p>
+					<p><img src="images/tutorials/usbpers/usbpers-10.png" /></p>
+
+					<p>When you are ready, select <b>Go</b> then click on the <b>Go</b> button.</p>
+					<p><img src="images/tutorials/usbpers/usbpers-11.png" /></p>
+
+					<p>The application will now go ahead and create the USB persistence for you. This may take some time.</p>
+					<p><img src="images/tutorials/usbpers/usbpers-12.png" /></p>
+
+					<p>The process is now complete. Click on all the <b>Quit</b> options. You can now plug your USB device into a computer and boot from it.</p>
+					<p><img src="images/tutorials/usbpers/usbpers-13.png" /></p><br>
+					<p><img src="images/tutorials/usbpers/usbpers-14.png" /></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+
+
+
+
+
+					<p><h2><a name="vbox">VirtualBox</a></h2></p>
+					<p>The VirtualBox application allows you to run other OS's (operating systems) within your main OS by creating a container
+					of sorts for them to run in, independently from the main OS. You install other OS's to VirtualBox just like you would to a normal
+					hard drive. VirtualBox creates a virtual hard drive for you to install to and the result is referred to as a Virtual Machine (VM).</p>
+
+					<p>You can install to VirtualBox using a bootable CD or DVD. Even more conveniently, you can install using a downloaded ISO
+					file without the need to burn it first to a CD/DVD. You can also just boot ISO files and run them as a live environment -
+					just as you would booting your computer from a live CD/DVD/USB - without installing it if you prefer.</p>
+
+					<p><b>Some common uses for VirtualBox are:</b></p>
+					<p>- Install a second copy of your main OS for testing and experimentation.<br />
+					- Install other Linux distros that you want to use regularly, but do not want to install as a dual-boot on your computer.<br />
+					- Install, or just run live, other distros for testing purposes.<br />
+					- Install Windows so you can run its programs within Linux without rebooting the computer.<br />
+					(Note: Microsoft considers that to be a separate installation of its software and requires another user license for that.)</p>
+
+					<p><b>Installing VirtualBox</b></p>
+					<p>To install VirtualBox, go to <b>Menu, Settings, Lite Software</b> and find it from the list of software to install. 
+					VirtualBox will take a couple of minutes to fully install, so just wait until the screen tells you it is done.</p>
+
+					<p>After installation is complete, you will find VirtualBox under both the <b>Accessories</b> and <b>System</b> sections of the <b>Menu</b> as <b>PC virtualization solution</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-01.png" /></p>
+
+					<p>VirtualBox does not come pre-configured to use USB sticks. You need to download an extra package for that from their website. Go ahead and start
+					VirtualBox, then follow the steps below to install what you need for USB support.</p>
+
+					<p><b>NB: Version numbers for VirtualBox - Please note that new versions are being released regularly, the information here is
+					provided as a guide only. The latest version number of VirtualBox will change with time.</b></p>
+
+					<p>You need to know the version number of your VirtualBox installation in order to download the matching "Extension Pack". In this example, 
+					our version is <b>6.1.4</b>; but double-check that by clicking <b>Help, About VirtualBox</b> from the main VirtualBox window. Then look along bottom of
+					pop-up window for the version number.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-02.png" /></p>
+
+					<p>For the latest version, go to this <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">VirtualBox</a> webpage. Otherwise, go
+					<a href="http://download.virtualbox.org/virtualbox/" target="_blank">here</a>, look for your version number and follow same steps as below to
+					continue.</p>
+					<p>Find the <b>Extension Pack</b> listed under the heading for your VirtualBox version and click on <b>All supported platforms</b> to download it. Save
+					the download to your Downloads folder.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-04.png" border="1" /></p>
+
+					<p>Choose <b>Open with: VirtualBox</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-05.png" /></p>
+
+					<p>Click on <b>Install</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-06.png" alt="vbox-06.png" /></p>
+
+					<p>Scroll to the bottom of the License window and click on <b>I Agree</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-07.png" /></p>
+
+					<p>Enter your password.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-08.png" /></p>
+
+					<p>Install complete.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-09.png" border="1" /></p>
+
+
+					<p><b>Using VirtualBox</b></p>
+					<p>VirtualBox can boot from either a live CD/DVD or an ISO file saved to your hard drive (HDD). In the following example we'll use a
+					downloaded ISO file. If you are using a bootable CD/DVD, go ahead and load it into the tray before we get started.</p>
+
+					<p><b>Menu, System, PC virtualization solution</b></p>
+					<p>From main VirtualBox window, click the <b>New</b> button to make a new virtual machine environment.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-11.png" border="1" /></p>
+
+					<p>Next, choose a <b>Name</b> for the virtual machine, the <b>Type</b> of operating system it will be, and
+					<b>Version</b> of the operating system. When filling in version, specify either 32 or 64-bit system and
+					choose the closest fit for the OS you will be installing if you don't see a listing that matches exactly under the <b>Version</b> drop-down box.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-12.png" /></p>
+
+					<p>In this example, we will make a new machine for another Ubuntu-based distro called <b>Xubuntu 20.04</b> and we are using its 64-bit version. There
+					is no listing for Xubuntu, so we'll just choose <b>Ubuntu_64</b> because that is what it is based on. (If you made a virtual machine
+					[VM] with Linux Lite installed, you would also choose Ubuntu for the same reason.) Click <b>Next</b> to continue.</p>
+
+					<p>Decide how much of your RAM (memory) you want dedicated to operating the VM. 512MB-2GB will likely be fine most of the time. Do not
+					dedicate more than half of your RAM to the VM - that could cause problems with the operation of your host OS, Linux Lite. (The VM is
+					operating from within the host OS - you don't want the VM using more resources than the host itself.) In this example, the computer (host) has
+					2Gb of RAM, so 1024MB (1Gb) was allotted to the VM.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-13.png" /></p>
+
+					<p>The next screen asks if you want to <b>Create a virtual hard disk now</b>. That is what we want, so we tick that radio button and click <b>Create</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-14.png" /></p>
+
+					<p>We'll choose <b>VDI (VirtualBox Disk Image)</b> from the <b>Hard disk file type</b> screen.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-15.png" /></p>
+
+					<p>We'll choose <b>Dynamically allocated</b> from the <b>Storage on physical hard drive</b> screen.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-16.png" /></p>
+
+					<p>On the next screen we make the virtual drive 10GB. (VirtualBox will dedicate space from your hard drive for the virtual drive - so be
+					sure you have enough room on your HDD to accommodate creating the virtual drive.)</p>
+					<p><img src="images/tutorials/virtualbox/vbox-17.png" /></p>
+
+					<p>After hitting <b>Create </b>your new VM will be listed along the left-hand side of the main VirtualBox window. (At this point, it is just
+					an empty container.)</p>
+					<p><img src="images/tutorials/virtualbox/vbox-18.png" border="1" /></p>
+
+					<p>You can adjust a few settings for the VM either before or after installing the OS. We'll do it before installation. Highlight the VM
+					and click <b>Settings</b>. Then, click <b>Display</b> along the left side and adjust the amount of video memory you want the VM to have. (Default
+					is 16MB, we'll give it 128MB in this example.) Also, click to Enable either <b>3-D</b> or <b>2-D Acceleration</b>. (If one gives you an "invalid
+					settings" message, unclick it and choose the other.)</p>
+					<p><img src="images/tutorials/virtualbox/vbox-19.png" /></p>
+
+					<p>Now, click <b>USB</b> on the left side and make sure that the USB controllers are enabled. This will allow you to copy to/from USB sticks in the VM.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-20.png" border="1" /></p>
+
+					<p>Click <b>OK</b> when done to get back to main window. With the VM highlighted on the left of main window, click the <b>Start</b>
+					arrow to begin installation.</p>
+
+					<p>The first screen you see will ask you what to use as your installation source and the CD/DVD drive will likely be already
+					listed. If that is what you are using and the disk is loaded in the tray, go ahead and hit <b>Start</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-21.png" /></p>
+
+					<p>Otherwise, click on the yellow folder icon to the right. The box below will appear.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-22.png" /></p>
+
+					<p>Browse to where your ISO image is.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-23.png" /></p>
+
+					<p>Click on it and then click on <b>Open</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-24.png" /></p>
+
+					<p>After you've found and selected your ISO, it will appear filled in the source box. Hit <b>Start</b> and it will now boot from the live ISO/CD/DVD.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-25.png" /></p>
+
+					<p>When the live environment finishes loading, click the install icon on the desktop to begin the installer. The installation process
+					is just the same as if you were installing to the computer normally. When asked if you want to "Erase disk and install", it is NOT going to erase your real hard drive - it is talking about 
+					the virtual hard drive. (Same thing if you choose 'Something else' and partition the drive manually.)</p>
+
+					<p>After install is complete, reboot the VM. If the installation disk appears to be stuck and not rebooting, click your mouse
+					somewhere inside the VM window, then hit the ENTER key. If nothing happens, click the "x" on the VM window and choose to Shutdown the
+					machine. Then just highlight the VM and hit the <b>Start</b> arrow again.</p>
+
+					<p>In the VM, you can do much the same as when installed for real on your computer. You can install things, download updates, etc., and
+					it all happens within the virtual environment on the virtual HDD.</p>
+
+					<p>Whenever you want to shutdown a running VM, shutdown using the normal shutdown method of the OS in the VM - not by closing the VM
+					window. (If the VM OS was Linux Lite, you would click Menu, Logout, Shutdown, just like on your computer.)</p>
+
+					<p><b>Using USB's in VirtualBox</b></p>
+					<p>Assuming you've already added the the <b>VirtualBox Extension Pack</b> to begin using USB's in your new VM, you need to add your username
+					to the <b>vboxusers</b> group. (You only need to do that once, not for every individual VM you make.)  You should
+					perform the following steps while no VM's are open.</p>
+
+					<p>Open the Linux Lite (not VirtualBox) Settings Manager, <b>Menu, Settings, Settings Manager</b> and select the <b>Lite User Manager</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-26.png" /></p>
+
+					<p>With your username showing under <b>Select user</b>, scroll down the list in the <b>Groups</b> column and place
+					a check in the box next to <b>vboxusers</b> to add yourself to that group and hit <b>Apply</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-27.png" /></p>
+
+					<p>Close out Lite User Manager, the Settings Manager and any other open programs.</p>
+					<p>Reboot the computer, then log back in for the new setting to take effect.</p>
+					<p>Open VirtualBox and start your new VM.</p>
+					<p>Once up and running you will see a little USB icon along bottom right edge of the VirtualBox window. Right-click on it to choose the USB
+					you want to use.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-28.png" /></p>
+
+					<p><b>Additional VirtualBox Information Sources:</b></p>
+					<p><a href="https://www.virtualbox.org/" target="_blank">VirtualBox Homepage</a><br />
+					<a href="https://www.virtualbox.org/manual/UserManual.html" target="_blank">VirtualBox User Manual</a><br />
+					<a href="https://forums.virtualbox.org/" target="_blank">VirtualBox Help Forums</a></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<p><h2><a name="filesearch">File Search</a></h2></p>
+					<p>File search is an easy to use GUI file search utility found under <b>Menu, Accessories, File search</b>.</p>
+					<p><img src="images/tutorials/filesearch/filesearch1.png" /></p>
+
+					<p>Upon opening File search, you will see this file search window: Click the 3-dots icon in upper-right corner and choose <b>Refresh search index</b>.</p>
+					<p><img src="images/tutorials/filesearch/filesearch2.png" /></p>
+
+					<p>Now click on the <b>Unlock</b> button.</p>
+					<p><img src="images/tutorials/filesearch/filesearch3.png" /></p>
+
+					<p>Enter your password.</p>
+					<p><img src="images/tutorials/filesearch/filesearch4.png" /></p>
+
+					<p>File search uses the <i>locate</i> command to search for files. The locate command relies on a database it maintains of the files on your computer.
+					That database gets automatically updated periodically - normally once a day. Before conducting a search it is a good idea to manually update
+					the database index to make sure that any file changes made since the last update are reflected in the search results.</p>
+					<p>Update complete.</p>
+					<p><img src="images/tutorials/filesearch/filesearch5.png" /></p>
+
+					<p>You can also use the 3-dots button for other options like displaying advanced settings in the search window. The advanced settings display
+					lets you filter search results by file modification dates, file types, file extensions, etc.</p>
+					<p><img src="images/tutorials/filesearch/filesearch6.png" /></p>
+
+					<p>The example below shows a search in my Home folder for any file with <b>car</b> in the file name.</p>
+					<p><img src="images/tutorials/filesearch/filesearch7.png" /></p>
+
+					<p>To limit the results to only <b>txt</b> files, simply click <b>Documents</b> under <b>File Type</b> in the advanced settings.</p>
+					<p><img src="images/tutorials/filesearch/filesearch8.png" /></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+				</div>
+				<div class="clear"> </div>
+			</div>
+		</div>
+		<div class="clear"> </div>
+	</div>	
+</body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Help Manual - Network</title>
+<meta name="description" content="Description to go here." />
+<!-- jQuery-->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/code.css" rel="stylesheet" type="text/css" media="all" />
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<!--fonts-->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<style>
+b    {font-weight: 400;}
+</style>
+<style>
+i    {font-style: italic;}
+</style>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+<style>.highlight { background: #FFFF40; }</style>
+<script type="text/javascript" src="js/highlight.js"></script>
+
+</head>
+<body onload="highlight();">
+	<div class="header">
+		<div class="header-left header-left1">
+			<div class="logo">
+				<center><a href="index.html"><img src="images/logo.png" alt=""></a></center>
+			</div>
+			<div class="top-nav">
+				<ul >
+					<li><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li class="active"><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+			</div>
+			<ul class="social-in">
+				<li><a href="https://www.facebook.com/linuxliteos" target="_blank"><i class="facebook"> </i></a></li>
+				<li><a href="https://twitter.com/linuxlite" target="_blank"><i class="twitter"> </i></a></li>
+				<li><a href="https://www.reddit.com/r/LinuxLite/" target="_blank"><i class="reddit"> </i></a></li>
+			</ul>
+		</div>
+		<!---->
+		<div class="header-top">
+			<div class="logo-in">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="top-nav-in">
+			<span class="menu"><img src="images/menu.png" alt=""> </span>
+				<ul >
+					<li><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li class="active"><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav-in ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+
+			</div>
+			<div class="clear"> </div>
+		</div>
+			<!---->
+		<div class="content">
+			<div class="about">
+				<div class="about-top">
+					<div class="grid-about">
+					</div>
+
+            				<p><a href="#nas">Accessing a NAS device</a><br />
+					<a href="#wired">Connecting to the Internet - Wired</a><br />
+            				<a href="#wireless">Connecting to the Internet - Wireless</a><br />
+            				<a href="#shares">Network Shares</a><br />
+										<a href="#lite-shares">&emsp;- Create Linux Lite Shares</a><br />
+										<a href="#wintolin">&emsp;- Access Linux Lite shares from Windows</a><br />
+										<a href="#lintowin">&emsp;- Access Windows shares from Linux Lite</a><br />
+					<a href="#nitroshare">NitroShare - Share files with Linux, Mac & Windows</a><br />
+					<a href="#vnc">Remote Access with VNC</a><br />
+            				<a href="#date">Setting the Time &amp; Date</a><br />
+					<a href="#usbmodem">USB Broadband Modem</a><br /></p>
+					
+			<!-- Offline Search feature - Start -->            				
+            				
+					<div class="block" style="padding-top: 39px;">
+
+					<form id="tipue_search" action="search.html">
+					<input type="text" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search terms" required>
+					<input type="image" id="search" name="" src="images/search.png" class="tipue_button search" alt="Search"><br><br>
+
+					<label for="tipue_per_page">Results per page:</label>
+					<select name="per_page" id="tipue_per_page">
+					<option value="7">7</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					</select><br><br>
+					<fieldset style="border:none;">
+					<legend style="display:inline;">Match:</legend><br>
+					<input type="radio" name="matchtype" id="any" value="0" checked="checked"><label for="any"> any search terms</label> &nbsp; <input type="radio" name="matchtype" id="all" value="1"><label for="all"> all search terms</label><br><br>
+					<p>TIP: For optimal results, only search for one or two words eg. <i>printer</i> instead of <i>how do I install a printer</i></p><br>
+					</fieldset>
+					</form></div>
+
+					<div id="tipue_search_content"><div class="tipue_search_rect1"></div><div class="tipue_search_rect2"></div><div class="rect3"></div></div>
+					
+			<!-- Offline Search feature - End -->					
+
+					<h2><a name="wired">Connecting to the Internet - Wired</a></h2>
+					<p>For the most part, you shouldn't have to configure anything in Network Connections if you are connected to your router with an ethernet cable.
+					Your router is most likely already set up to give you an IP address automatically. So in this tutorial we will instead focus on connecting to your router with a static IP address.</p>
+					<p>Make sure Enable Networking has a tick beside it. The first step is to left click on the network tray icon and select Edit Connections.</p>
+					<p>If at any point you are asked to enter your password, please do so.</p>
+					<p><img src="images/network/wired/wired1.png" alt=""></p>
+
+					<p>Highlight the <b>Wired connection</b> entry, and click on the <b>Edit</b> (cog) button.</p>
+					<p><img src="images/network/wired/wired2.png" alt=""></p>
+
+					<p>Click on the <b>IPv4 or IPv6</b> tab (consult your ISP on which one to use, IPv4 is the default) and select <b>Manual</b>.</p>
+					<p><img src="images/network/wired/wired3.png" alt=""></p>
+
+					<p>Click on the <b>Add</b> button in <b>Addresses</b> an enter in the appropriate numbers. Be sure to include the <b>DNS</b> address. This is typically
+					the same address as your router web login address (just the 4 sets of numbers).</p>
+
+					<p>Example:</p><br />
+					<p><b>Address:</b> 192.168.1.44<br />
+					<b>Netmask:</b> 24<br />
+					<b>Gateway:</b> 192.168.1.1 (this is your Router address)<br />
+					<b>DNS Servers:</b> 192.168.1.1 (this is also your Router address)<br />
+
+					<p><img src="images/network/wired/wired4.png" alt=""></p>
+
+					<p>Click on <b>Save</b> to finish.</p>
+
+					<h2><a name="wireless">Connecting to the Internet - Wireless</a></h2>
+					<p>In the system tray (near the clock, bottom right hand side of your screen) if you have no connection at the moment you will
+					see a diagonal broken line with a red cross next to it. This denotes that there is no connection currently. Left click on the icon,
+					if your wireless is working, you should have a list of wireless networks in your area, select your network. If you cannot see
+					any wireless networks at all, your wireless device driver may not be installed, or for example your wireless switch on your
+					laptop is in the Off position. If after you have checked this there are still no wireless networks showing, go to <b>Menu, Settings,
+					Install Drivers</b> and see if your wireless device is listed. If it is, install the driver for it and continue with this tutorial.
+					(You will need to connect to the internet using a wired connection in order to download and install the wireless driver.)</p>
+					<p><img src="images/network/wireless/wireless-1.png"></p>
+
+					<p>A box will pop up asking for your wireless password. If you would like to view your password while you type it, tick the '<b>Show
+					password</b>' box to ensure that you have entered your wireless password correctly.</p>
+					<p><img src="images/network/wireless/wireless-2.png"></p>
+
+					<p>You will then receive a notification in the top right hand corner of your screen once you are connected.</p>
+					<p><img src="images/network/wireless/wireless-3.png" /></p>
+
+					<p>After a successful connection, you should see a tray icon like the one shown below.</p>
+					<p><img src="images/network/wireless/wireless-4.png"></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="usbmodem">USB Broadband Modem</a></h2>
+					<p>If you have the <b>Huawei E220</b> then this should work out of the box. This is a very common modem and we encourage you to use
+					this model if it is possible.</p>
+					<p>Right click on the Network Connections tray icon and select <b>New Mobile Broadband</b> connection.
+					Configure your settings according to the details from your 3g service provider.</p>
+					<p><img src="images/network/usbmodem1.png"></p>
+
+					<p>At this stage no other modems have been tested.</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="nitroshare">NitroShare - Share files with Linux, Mac & Windows</a></h2>
+
+					<p>NitroShare allows easy point and click sharing of files between all desktop operating systems including Linux, Mac & Windows.</p>
+
+					<p><b>If you are going to use a Firewall:</b></p>
+
+					<p>In Linux Lite, the Firewall (disabled by default) has been preconfigured to allow NitroShare traffic. Make sure your Firewall has been set to <b>home</b> before beginning this tutorial if you are going to use a Firewall. See <a href="tutorials.html#firewall" target="_blank">here</a> for more information on this. 
+					If you're running Linux Lite make sure you place a tick in <b>nitroshare</b> as shown below. In the Firewall, click on <b>Configuration - Permanent</b>, place a tick in <b>nitroshare</b> as shown below, then click on <b>Options, Reload Firewalld</b>.</p>
+					<p><img src="images/network/nitroshare/nitroshare-1.png" /></p>
+
+					<p>Let's install NitroShare. <b>Menu, Settings, Lite Software</b>. Enter your password and click on yes to <b>update sources now</b>.
+					<p><img src="images/network/nitroshare/nitroshare-2.png" /></p>
+
+					<p>Now click on <b>Install Software</b>.</p>
+					<p><img src="images/network/nitroshare/nitroshare-3.png" /></p>
+
+					<p>Left click on NitroShare and click on <b>Install</b> at the bottom right. Proceed with the installation. When the installation has finished, quit Lite Software.</p>
+					<p><img src="images/network/nitroshare/nitroshare-4.png" /></p>
+
+					<p>Go to <b>Menu, Internet, NitroShare</b>. Click on the <b>Close</b> button that pops up one time only, and then right click on the NitroShare tray icon and choose <b>Settings</b>.</p>
+					<p><img src="images/network/nitroshare/nitroshare-5.png" /></p>
+					<p><img src="images/network/nitroshare/nitroshare-6.png" /></p>
+
+					<p>Choose the directory where you want to receive files to. Leave the other settings, unless you want to change them. Click <b>OK</b> when done.</p>
+					<p><img src="images/network/nitroshare/nitroshare-7.png" /></p>
+
+					<p>Let's send someone else on the network running NitroShare a file. Both computers MUST be on the same network, ie. connected to the same router. 
+					Right click on the NitroShare tray icon, select <b>Send Files</b>.</p>
+					<p><img src="images/network/nitroshare/nitroshare-8.png" /></p>
+
+					<p>Select the file you want to send and click on <b>Open</b>.</p>
+					<p><img src="images/network/nitroshare/nitroshare-9.png" /></p>
+
+					<p>Select the computer you want to send the file to, and click on <b>OK</b>.</p>
+					<p><img src="images/network/nitroshare/nitroshare-10.png" /></p>
+
+					<p>Transfer successful.</p>
+					<p><img src="images/network/nitroshare/nitroshare-11.png" /></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="nas">Accessing a NAS device</a></h2>
+					<p>Many homes now use a NAS or Network Attached Storage device. In this tutorial we'll show you how to access all your media
+					files, then show you how to play them across your network with VLC. When this set up is complete, you'll also be able to copy and
+					paste files between your NAS and your pc just like you did in Windows or Mac.</p>
+					<p>First thing you need to do is find the IP address of your NAS. You may know this already or your NAS manual will show you
+					how to find this. Once you have your NAS's IP address, open up your home folder and type in the following:</p>
+					<p><b>smb://192.168.1.49</b> where <b>192.168.1.49</b> is your NAS's IP address.</p>
+					<p><img src="images/network/nas/nas1.png" /></p>
+
+					<p>Put in the username of the NAS, in most cases it is <b>admin</b>, but again refer to your manual for the correct information.
+					Put in the workgroup (<b>Domain</b>) name, and finally the password for your NAS. Place a dot in <b>Remember forever</b> if you want it to save your details.</p>
+					<p><img src="images/network/nas/nas2.png" /></p>
+
+					<p>You should now see all of your NAS folders.</p>
+					<p><img src="images/network/nas/nas3.png" /></p>
+
+					<p>Lets look inside the <b>Movies</b> folder for this device, as you can see I have a movie file in there called <b>The Code Story of Linux Documentary.webm</b></p>
+					<p><img src="images/network/nas/nas4.png" /></p>
+
+					<p>Before we can start playing media files across the network, we need to set up VLC so that it can access and play files remotely.
+					In Linux Lite, click on <b>Menu, Multimedia, VLC Media Player</b>. With VLC open, click on <b>Tools, Preferences</b>.</p>
+					<p><img src="images/network/nas/nas5.png" /></p>
+
+					<p>In the window that pops up, in the bottom left click on <b>All</b>. Then on the left, expand <b>Input / Codecs, Access modules, SMB</b>. Then put in your NAS's username,
+					password and finally the <b>SMB domain</b> (Workgroup). Click on <b>Save</b> to finish and close VLC.</p>
+					<p><img src="images/network/nas/nas6.png" /></p>
+
+					<p>Now that we've given VLC the network credentials it needs to access your NAS, we can browse and play our files.</p>
+					<p><img src="images/network/nas/nas7.png" /></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="shares">Network Shares</a></h2>
+					<p>A Network Share is a computer resource made available from one computer to others on a computer network such as files, folders and printers to mention the most common.
+					These resources can be remotely accessed from another computer, typically via a local area network or intranet, transparently as if it were a resource in the local machine.
+					Linux Lite includes the <b>Lite Network Shares</b> application to help in configuring your shares for access from other computers in your network; e.g.: a Windows machine.
+					In Linux, the suite that provides seamless file and print services interoperability for Windows, Linux and Unix is known as <b>Samba</b>.</p>
+
+					<h2><a name="lite-shares">Network Shares - Create Linux Lite Shares</a></h2>
+					<p>This section will guide you on how to create your first Linux Lite share making the process as simple as it really is once you understand the basics:</p>
+
+					<p>Create a new folder inside your home folder by right-clicking an empty section in your home folder and selecting <b>Create Folder</b> from the context menu pop-up. In this 
+					example we will name it:</p>
+					<p><b>linux_share</b></p>
+					<p><img src="images/network/nss/nss-create-folder-share.png" /><p>
+
+					<p>Next, we need to tell Samba (SMB) who we are going to login as to access our Linux Lite shares. Open up a terminal and type:</p>
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo smbpasswd -a name</code></pre><br>
+					<p>...where <b>name</b> is your Linux Lite username; in our case the username is <b>jerry</b>. For easily remembering the SMB password, you can use the same password for SMB as that in your Linux Lite
+						user account if you wish.</p>
+
+						<p>You'll be asked to enter the new SMB password twice.</p>
+						<p><img src="images/network/nss/nss-create-smb-password.png" /><p>
+
+						<p>Open your home folder, navigate to the <b>/etc/samba/</b> directory, right click on the file <b>smbusers</b> and <b>Open as Administrator</b>.
+						<p><img src="images/network/nss/nss-smb-username-map-file.png" /><p>
+
+					<p>The file will open in the Text Editor. The smbusers file will contain a username map list (one per line) of your Linux Lite and SMB accounts.
+						We will replace the default <b>linux = "linux"</b> in that file with our Linux Lite username in each of the brackets:</p>
+						<p><b>username = "username"</b>... in our case: <b>jerry = "jerry"</b></p>
+						<p><img src="images/network/nss/nss-username-mapped.png" /><p>
+
+					<p>You can now <b>Save</b> and <b>Close</b> the smbusers file, and close the terminal.</p>
+
+					<p>Open <b>Menu</b>, <b>Settings</b>, <b>Lite Network Shares</b> and click on <b>Edit Share Settings</b>.</p>
+					<p><img src="images/network/nss/nss-main-window.png" /><p>
+
+					<p>The configuration file will then open in leafpad text editor. Default settings are shown below:</p>
+
+					<table width="100%" id="table1" bgcolor="#FFFF55">
+					<tr>
+						<td><br>#======================= Global Settings ====================================<br>
+						[global]<br>
+						workgroup = <b>WORKGROUP</b><br>
+						server string = Linux Lite Shares<br>
+						netbios name = <b>linux</b><br>
+						security = user<br>
+						encrypt passwords = true<br>
+						username map = /etc/samba/smbusers<br>
+						map to guest = bad user<br>
+						guest account = nobody<br>
+						dns proxy = no<br>
+						#======================= Share Definitions ===================================<br>
+						[liteshare]<br>
+						path = /home/%U/<b>linux_share</b><br>
+						available = yes<br>
+						valid users = %U %G<br>
+						write list = %U<br>
+						browsable = yes<br>
+						public = no<br>
+						writable = yes<br>
+						guest ok = no<br>
+						read only = no<br>
+						printable = no<br>
+						locking = no<br>
+						strict locking = no
+						<br>
+						<br></td>
+					</tr>
+					</table><br>
+
+					<p><b>For a first time basic setup, there is no need to change the default settings. </b>You likely only need to verify the following:</p>
+
+					<table width="100%" id="table1" bgcolor="#FFFF55">
+					<tr>
+						<td><br><b>WORKGROUP</b> - must be equal to the workgroup name in your network. "WORKGROUP" is usually the default.<br>
+						<br>
+						<b>netbios name</b> - must be equal to the computer name. In a terminal type in hostname to get your netbios name.<br>
+						<br>
+						<b>jerry@jerryvb:~$</b><br>
+						<br>
+						<b>jerryvb</b> is the <b>netbios name</b> / <b>computer name</b>.<br>
+						<br>
+						<b>path =</b> the path to the folder in your home directory where shared files will be stored. <b>ONLY</b> change the	folder name part; e.g.: /home/%U/linux_share<br>
+						" <b>linux_share</b> " is the folder name in Linux Lite you are sharing from your home folder.
+						" <b>%U</b> " is Samba's substitution for the username; meaning same as your username. Leave the %U as it is. Change <b>ONLY</b> the word " <b>linux_share</b> " to the name of
+						the folder you created in the first step of this tutorial if you used a different folder name.
+						<br>
+						<br></td>
+					</tr>
+					</table><br>
+
+					<p><b>Save</b> and <b>Close</b> the file, then click on <b>Restart services</b>.</p>
+					<p><img src="images/network/nss/nss-restart-services.png" /><p>
+
+					<p>You can now access Linux Lite shares from another computer in your network.</p>
+					<p><b>TIP:</b> Keep pressing F5 in the share folder, sometimes it takes a few seconds for the shares to appear.</p>
+					<p>If at any stage you want to add more share folders, you can simply add more blocks like in the example below:</p>
+					<table width="100%" id="table1" bgcolor="#FFFF55">
+					<tr>
+						<td><br>#======================= Global Settings ====================================<br>
+						[global]<br>
+						workgroup = WORKGROUP<br>
+						server string = Linux Lite Shares<br>
+						netbios name = jerryvb<br>
+						security = user<br>
+						encrypt passwords = true<br>
+						username map = /etc/samba/smbusers<br>
+						map to guest = bad user<br>
+						guest account = nobody<br>
+						dns proxy = no<br>
+						#======================= Share Definitions ===================================<br>
+						[liteshare]<br>
+						path = /home/jerry/linux_share<br>
+						available = yes<br>
+						valid users = %U %G<br>
+						write list = %U<br>
+						browsable = yes<br>
+						public = no<br>
+						writable = yes<br>
+						guest ok = no<br>
+						read only = no<br>
+						printable = no<br>
+						locking = no<br>
+						strict locking = no<br>
+						<br>
+						[videoshare]<br>
+						path = /home/jerry/Videos<br>
+						available = yes<br>
+						valid users = %U %G<br>
+						write list = %U<br>
+						browsable = yes<br>
+						public = no<br>
+						writable = yes<br>
+						guest ok = no<br>
+						read only = no<br>
+						printable = no<br>
+						locking = no<br>
+						strict locking = no<br>
+						<br>
+						[dloadshare]<br>
+						path = /home/jerry/Downloads<br>
+						available = yes<br>
+						valid users = %U %G<br>
+						write list = %U<br>
+						browsable = yes<br>
+						public = no<br>
+						writable = yes<br>
+						guest ok = no<br>
+						read only = no<br>
+						printable = no<br>
+						locking = no<br>
+						strict locking = no
+						<br>
+						<br></td>
+					</tr>
+					</table><br>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="wintolin">Accessing Linux Lite shares from Windows</a></h2>
+					<p>Go to your Windows machine, in this example we'll use Windows 10.</p>
+					<p>Open up <b>Network</b> in Windows. You should see the Linux Lite machine appear after a short while. </p>
+					<p><img src="images/network/smb/access_ll1.png"></p>
+
+					<p>If you don't, simply type the ip address of the Linux Lite machine into the address bar with two back slashes in front eg. <b>\\192.168.1.199</b> 
+					To get the ip address of your Linux Lite pc, in Linux Lite open a terminal and type <b>ifconfig</b></p>
+					<p><img src="images/network/smb/access_ll1a.png"></p>
+
+					<p>Look for the <b>inet</b> address.</p>
+					<p><img src="images/network/smb/access_ll1b.png"></p>
+
+					<p>Double click on the machine name. A username and password dialogue box will pop up, enter in the user and password we created in the <b>Create Linux Lite Shares</b> tutorial above.</p>
+					<p><img src="images/network/smb/access_ll2.png"></p>
+
+					<p>And here we see our Linux Lite computer share folder:</p>
+					<p><img src="images/network/smb/access_ll3.png"></p>
+
+					<p>All that's left to do is to double click on the Linux Lite share and we will be inside the share folder. Now you can copy
+					and paste files to your Linux Lite computer.</p>
+					<p><img src="images/network/smb/access_ll4.png"></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="lintowin">Accessing Windows shares from Linux Lite</a></h2>
+					<p>Go to your Windows machine and find the ip address. To do this, open a command prompt and type in: <b>ipconfig</b></p>
+					<p><img src="images/network/smb/win_ipconfig.png"></p>
+
+					<p>Usually the results at the top has your ip address listed. In the above example, the <b>IPv4 Address</b> is: <b>192.168.1.49 </b>Make a note of this ip address.</p>
+					<p>Now go back to your Linux Lite computer, and open your home folder.</p>
+
+					<p>NOTE: If by the end of this Shares tutorial you are still not seeing any shares, try restarting both machines. Also note that sometimes it can take a while before the shares appear.</p>
+
+					<p>In the address bar, type in: <b>smb://ipaddressofwindowspc</b> where <b>ipaddressofwindowspc</b> is the actual numbered ip address of your Windows computer.</p>
+					<p><img src="images/network/smb/smb_address_bar.png"></p>
+
+					<p>If everything went to plan, you should now be prompted for your Windows username, domain or workgroup and your Windows password.</p>
+					<p><b>Windows username - Windows workgroup name - Windows password</b></p>
+					<p><img src="images/network/smb/smb_password.png"></p>
+
+					<p>Now you can copy and paste files to your Windows computer.</p>
+					<p><img src="images/network/smb/smb_shares.png"></p>
+
+					<p><b>NOTE:</b> If the ip address method does not work eg. <b>smb://192.168.1.49</b> try <b>smb://windowspc</b> where <b>windowspc</b> is the netbios name
+					of the Windows computer.</p>
+					<p><b>NOTE: If you are still not having any luck with either method, try <a target="_blank" href="http://nitroshare.net/">
+					NitroShare</a>, a cross-platform network sharing application for Windows, Mac and Linux. You can view a video tutorial on it
+					<a target="_blank" href="http://www.youtube.com/watch?v=0QduAP4CxXI">here</a>. Another method you could consider is setting up an FTP
+					server on your Windows computer and connecting to it with Filezilla, available from Menu, Settings, Lite Software</a>.</b></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="vnc">Remote Access with VNC</a></h2>
+					<p>Here is a quick tutorial on how to configure x11vnc (VNC Server) for remote access/control to your Linux Lite PC via VNC client.</p>
+					
+					<p>Start by installing x11vnc from Terminal with:</p>
+					
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo apt install -y x11vnc</code></pre><br>
+						
+					<p><img src="images/network/vnc/vnc1.png" /></p>
+						
+					<p>Next, let’s create a directory to store a file that will contain the password used for VNC authentication:</p>
+					
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo mkdir /etc/x11vnc</code></pre><br>
+						
+					<p>Now we'll create an encrypted password file and save it in <b>/etc/x11vnc/</b>. You will be prompted to type and verify the password:</p>
+					
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo x11vnc --storepasswd /etc/x11vnc/vncpwd</code></pre><br>
+					
+					<p><img src="images/network/vnc/vnc2.png" /></p>
+					
+					<p>Now we will create the systemd service file for the x11vnc service:</p>
+					
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">pkexec mousepad /lib/systemd/system/x11vnc.service</code></pre><br>
+						
+					<p>Copy & paste the code below into the Text Editor:</p>
+						
+					<table width="100%" id="table1" bgcolor="#FFFF55">
+					<tr>
+						<td><br>[Unit]<br>
+						Description=VNC Server for X11<br>
+						Requires=display-manager.service<br>
+						After=display-manager.service<br>
+						[Service]<br>
+						Type=forking<br>
+						ExecStart=/usr/bin/x11vnc -dontdisconnect -auth guess -forever -shared -noxdamage -repeat -rfbauth /etc/x11vnc/vncpwd -rfbport 5900 -bg -o /var/log/x11vnc.log<br>
+						ExecStop=/usr/bin/killall x11vnc<br>
+						Restart=on-failure<br>
+						Restart-sec=5<br>
+						<br>
+						[Install]<br>
+						WantedBy=multi-user.target
+						<br>
+						<br>
+						</td>
+					</tr>
+					</table><br>
+					
+					<p><img src="images/network/vnc/vnc3.png" /></p>
+					
+					<p>Save changes and close leafpad. Then copy <b>/lib/systemd/system/x11vnc.service</b> to <b>/etc/systemd/system/</b></p>
+					
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo cp /lib/systemd/system/x11vnc.service /etc/systemd/system/</code></pre><br>
+						
+					<p>Next, let’s edit /lib/systemd/system/graphical.target</p>
+					
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">pkexec mousepad /lib/systemd/system/graphical.target</code></pre><br>
+						
+					<p>Update graphical.target file content as shown below:</p>
+					
+					<table width="100%" id="table1" bgcolor="#FFFF55">
+					<tr>
+						<td><br># This file is part of systemd.<br>
+						#<br>
+						# systemd is free software; you can redistribute it and/or modify it<br>
+						# under the terms of the GNU Lesser General Public License as published by<br>
+						# the Free Software Foundation; either version 2.1 of the License, or<br>
+						# (at your option) any later version.<br>
+						[Unit]<br>
+						Description=Graphical Interface<br>
+						Documentation=man:systemd.special(7)<br>
+						Requires=multi-user.target<br>
+						Wants=display-manager.service x11vnc.service<br>
+						Conflicts=rescue.service rescue.target<br>
+						After=multi-user.target rescue.service rescue.target display-manager.service<br>
+						AllowIsolate=yes
+						<br>
+						<br>
+						</td>
+					</tr>
+					</table><br>
+					
+					<p><img src="images/network/vnc/vnc4.png" /></p>
+					
+					<p>Save changes and close the Text Editor. Then copy <b>/lib/systemd/system/graphical.target</b> to <b>/etc/systemd/system/</b></p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo cp /lib/systemd/system/graphical.target /etc/systemd/system/</code></pre><br>
+
+					<p>Reload services and enable the x11vnc service at boot time:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo systemctl daemon-reload</code></pre><br>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo systemctl enable graphical.target</code></pre><br>
+
+					<p>Finally, either reboot Linux Lite or manually start x11vnc service:</p>
+
+					<p>Reboot:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo reboot now</code></pre><br>
+
+					<p>or start x11vnc without rebooting:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo systemctl start x11vnc.service</code></pre><br>
+
+
+					<p><h2>Remotely accessing/controlling Linux Lite</h2></p>
+
+					<p>From a client computer in your network, using a VNC client of your choice (Remmina, Ultra VNC, TightVNC, Chicken VNC, VNC Viewer, Screen Sharing, 
+					enter the IP address of your Linux Lite box or its hostname.</p>
+
+					<p><img src="images/network/vnc/vnc5.png" /></p>
+
+					<p><img src="images/network/vnc/vnc6.png" /></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="date">Setting the Time and Date</a></h2>
+					<p>Go to <b>Menu, Settings, Time and Date</b>.</p>
+					<p><img src="images/network/datetime/date-time1.png" /></p>
+
+					<p>Click on the <b>Unlock</b> button and enter your password when asked.</p>
+					<p>Click inside the <b>Time zone</b> box. In the following example we have <b>Pacific/Auckland</b>.</p>
+					<p><img src="images/network/datetime/date-time2.png" /></p>
+
+					<p>Click on one of the <b>red</b> dots in your timezone/location. Click on <b>Close</b> to finish.</p>
+					<p><img src="images/network/datetime/date-time3.png" /></p>
+
+			<p><a href="#top">Top of page</a></div>
+
+				<div class="clear"> </div>
+			</div>
+		</div>
+		<div class="clear"> </div>
+	</div>
+</body>
+</html>

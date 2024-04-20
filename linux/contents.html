@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Help Manual - Contents</title>
+<meta name="description" content="Description to go here." />
+<!-- jQuery-->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/code.css" rel="stylesheet" type="text/css" media="all" />
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<!--fonts-->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<style>
+b    {font-weight: 400;}
+</style>
+<style>
+i    {font-style: italic;}
+</style>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
+.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#EBEBEB;border-top-width:1px;border-bottom-width:1px;}
+.tg th{font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#FFFFFF;border-top-width:1px;border-bottom-width:1px;}
+.tg .tg-vn4c{background-color:#FFFFFF}
+</style>
+<script src="js/sorttable.js"></script>
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+</head>
+<body onload="highlight();">
+	<div class="header">
+		<div class="header-left header-left1">
+			<div class="logo">
+				<center><a href="index.html"><img src="images/logo.png" alt=""></a></center>
+			</div>
+			<div class="top-nav">
+				<ul >
+					<li><a href="index.html" >HOME</a></li>
+					<li class="active"><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+			</div>
+			<ul class="social-in">
+				<li><a href="https://www.facebook.com/linuxliteos" target="_blank"><i class="facebook"> </i></a></li>
+				<li><a href="https://twitter.com/linuxlite" target="_blank"><i class="twitter"> </i></a></li>
+				<li><a href="https://www.reddit.com/r/LinuxLite/" target="_blank"><i class="reddit"> </i></a></li>
+			</ul>
+		</div>
+		<!---->
+		<div class="header-top">
+			<div class="logo-in">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="top-nav-in">
+			<span class="menu"><img src="images/menu.png" alt=""> </span>
+				<ul >
+					<li><a href="index.html" >HOME</a></li>
+					<li class="active"><a href="contents.html" class="black" > CONTENTS</a></li>
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav-in ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+
+			</div>
+			<div class="clear"> </div>
+		</div>
+			<!---->
+		<div class="content">
+			<div class="about">
+				<div class="about-top">
+					<div class="grid-about">
+					</div>
+
+            				<p><a href="#start">Start</a><br />
+            				<a href="#install">Install</a><br />
+            				<a href="#network">Network</a><br />
+            				<a href="#software">Software</a><br />
+            				<a href="#hardware">Hardware</a><br />
+            				<a href="#tutorials">Tutorials</a><br />
+            				<a href="#customize">Customize</a><br />
+            				<a href="#glossary">Glossary</a></p>
+
+			<!-- Offline Search feature - Start -->            				
+            				
+					<div class="block" style="padding-top: 39px;">
+
+					<form id="tipue_search" action="search.html">
+					<input type="text" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search terms" required>
+					<input type="image" id="search" name="" src="images/search.png" class="tipue_button search" alt="Search"><br><br>
+
+					<label for="tipue_per_page">Results per page:</label>
+					<select name="per_page" id="tipue_per_page">
+					<option value="7">7</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					</select><br><br>
+					<fieldset style="border:none;">
+					<legend style="display:inline;">Match:</legend><br>
+					<input type="radio" name="matchtype" id="any" value="0" checked="checked"><label for="any"> any search terms</label> &nbsp; <input type="radio" name="matchtype" id="all" value="1"><label for="all"> all search terms</label><br><br>
+					<p>TIP: For optimal results, only search for one or two words eg. <i>printer</i> instead of <i>how do I install a printer</i></p><br>
+					</fieldset>
+					</form></div>
+
+					<div id="tipue_search_content"><div class="tipue_search_rect1"></div><div class="tipue_search_rect2"></div><div class="rect3"></div></div>
+					
+			<!-- Offline Search feature - End -->
+
+<h2><a name="start">Start</a></h2>
+<table class="tg sortable" width=100%>
+  <tr>
+    <td class="tg-vn4c"><a href="#"><img src="images/sort.png"></a></td>
+    <td class="tg-vn4c" align="right"><a href="#"><img src="images/sort.png"></a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Accessibility - Assistive Technologies</td>
+    <td class="tg-031e" align="right"><a href="start.html#accesstech">Assistive Technologies</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Accessories Menu</td>
+    <td class="tg-vn4c" align="right"><a href="start.html#accessoriesmenu">Menus</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Application Finder</td>
+    <td class="tg-031e" align="right"><a href="start.html#appfinder">Software</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Forums</td>
+    <td class="tg-vn4c" align="right"><a href="start.html#forums">Support</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">General Software Support</td>
+    <td class="tg-031e" align="right"><a href="start.html#gensoftsup">Support</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Graphics Menu</td>
+    <td class="tg-vn4c" align="right"><a href="start.html#graphicsmenu">Menus</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Help Manual</td>
+    <td class="tg-031e" align="right"><a href="start.html#helpmanual">Support</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Included Software</td>
+    <td class="tg-vn4c" align="right"><a href="start.html#inclsoftware">Software</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Install Updates</td>
+    <td class="tg-031e" align="right"><a href="start.html#instupdates">Menus</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Internet Menu</td>
+    <td class="tg-vn4c" align="right"><a href="start.html#internetmenu">Menus</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Keyboard Function</td>
+    <td class="tg-031e" align="right"><a href="start.html#kbfunction">Keyboard</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Lite Info</td>
+    <td class="tg-vn4c" align="right"><a href="start.html#liteinfo">Lite Info</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Lite System Report</td>
+    <td class="tg-031e" align="right"><a href="start.html#createsysreport">Reports</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Menus</td>
+    <td class="tg-vn4c" align="right"><a href="start.html#menus">Menus</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Multimedia Menu</td>
+    <td class="tg-031e" align="right"><a href="start.html#multimediamenu">Menus</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">My Computer Menu</td>
+    <td class="tg-vn4c" align="right"><a href="start.html#mycomputermenu">My Computer Menu</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Office Menu</td>
+    <td class="tg-031e" align="right"><a href="start.html#officemenu">Menus</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Post Installation</td>
+    <td class="tg-vn4c" align="right"><a href="start.html#postinst">Post Installation</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Secure Boot</td>
+    <td class="tg-031e" align="right"><a href="start.html#secboot">Secure Boot</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Social Networks</td>
+    <td class="tg-vn4c" align="right"><a href="start.html#socnetworks">Social Networks</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Support</td>
+    <td class="tg-031e" align="right"><a href="start.html#support">Support</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">System Menu</td>
+    <td class="tg-vn4c" align="right"><a href="start.html#systemmenu">Menus</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Tour</td>
+    <td class="tg-031e" align="right"><a href="start.html#tour">Tour</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">UEFI</td>
+    <td class="tg-vn4c" align="right"><a href="start.html#uefi">UEFI</a></td>
+  </tr>
+</table><br>
+
+					<p><a href="#top">Top of page</a></p>
+
+<h2><a name="install">Install</a></h2>
+<table class="tg sortable" width=100%>
+  <tr>
+    <td class="tg-vn4c"><a href="#"><img src="images/sort.png"></a></td>
+    <td class="tg-vn4c" align="right"><a href="#"><img src="images/sort.png"></a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Adding another User</td>
+    <td class="tg-031e" align="right"><a href="install.html#adduser">Users</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Enabling TRIM on your SSD</td>
+    <td class="tg-vn4c" align="right"><a href="install.html#enabletrim">Trim</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Installation Guide</td>
+    <td class="tg-031e" align="right"><a href="install.html#installguide">Install</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c" align="left">Installing Linux Lite</td>
+    <td class="tg-vn4c" align="right"><a href="install.html#instllcomp">Install</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e" align="left">Installing Linux Lite to your computer - UEFI Mode</td>
+    <td class="tg-031e" align="right"><a href="install.html#installuefimode">Install</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c" align="left">Installing Linux Lite to your computer - Legacy BIOS Mode</td>
+    <td class="tg-vn4c" align="right"><a href="install.html#installlegacymode">Install</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Mounting Drives &amp; Partitions</td>
+    <td class="tg-031e" align="right"><a href="install.html#mountpartdrives">Partitions</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">No USB Boot option in the BIOS?</td>
+    <td class="tg-vn4c" align="right"><a href="install.html#plop">Install</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">OEM Install</td>
+    <td class="tg-031e" align="right"><a href="install.html#oeminstall">Install</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Preparing your Computer</td>
+    <td class="tg-vn4c" align="right"><a href="install.html#prepareinst">Install</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Removing a User</td>
+    <td class="tg-031e" align="right"><a href="install.html#userdel">Users</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Resetting your Password</td>
+    <td class="tg-vn4c" align="right"><a href="install.html#respassword">Password</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Securely Erasing files Permanently</td>
+    <td class="tg-031e" align="right"><a href="install.html#secureerase">Security</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Setting your Language</td>
+    <td class="tg-vn4c" align="right"><a href="install.html#setlang">Language</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Terminal Basics</td>
+    <td class="tg-031e" align="right"><a href="install.html#termbasics">Terminal</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Writing Linux Lite to USB on Windows</td>
+    <td class="tg-vn4c" align="right"><a href="install.html#llusbwin">Media</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Writing Linux Lite to DVD on Windows</td>
+    <td class="tg-031e" align="right"><a href="install.html#lldvdwin">Media</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Writing Linux Lite to USB in Linux</td>
+    <td class="tg-vn4c" align="right"><a href="install.html#llusblin">Media</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Writing Linux Lite to USB on Linux and OSX</td>
+    <td class="tg-031e" align="right"><a href="install.html#lldvdusbosx">Media</a></td>
+  </tr>
+</table><br>
+
+					<p><a href="#top">Top of page</a></p>
+
+<h2><a name="network">Network</a></h2>
+<table class="tg sortable" width=100%>
+  <tr>
+    <td class="tg-vn4c"><a href="#"><img src="images/sort.png"></a></td>
+    <td class="tg-vn4c" align="right"><a href="#"><img src="images/sort.png"></a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Accessing a NAS device</td>
+    <td class="tg-031e" align="right"><a href="network.html#nas">Shares</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Connecting to the Internet - Wired</td>
+    <td class="tg-vn4c" align="right"><a href="network.html#wired">Connecting</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Connecting to the Internet - Wireless</td>
+    <td class="tg-031e" align="right"><a href="network.html#wireless">Connecting</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Linux Lite Shares from Windows</td>
+    <td class="tg-vn4c" align="right"><a href="network.html#wintolin">Shares</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Network Shares</td>
+    <td class="tg-031e" align="right"><a href="network.html#shares">Shares</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">NitroShare - Share files with Linux, Mac & Windows</td>
+    <td class="tg-vn4c" align="right"><a href="network.html#nitroshare">Shares</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Remote Access with VNC</td>
+    <td class="tg-031e" align="right"><a href="network.html#vnc">Remote</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Setting the Time and Date</td>
+    <td class="tg-vn4c" align="right"><a href="network.html#date">Time and Date</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">USB Broadband Modem</td>
+    <td class="tg-031e" align="right"><a href="network.html#usbmodem">Connecting</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Windows Shares from Linux Lite</td>
+    <td class="tg-vn4c" align="right"><a href="network.html#lintowin">Shares</a></td>
+  </tr>
+</table><br>
+
+					<p><a href="#top">Top of page</a></p>
+
+<h2><a name="software">Software</a></h2>
+<table class="tg sortable" width=100%>
+  <tr>
+    <td class="tg-vn4c"><a href="#"><img src="images/sort.png"></a></td>
+    <td class="tg-vn4c" align="right"><a href="#"><img src="images/sort.png"></a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Changing Desktop Environments</td>
+    <td class="tg-031e" align="right"><a href="software.html#deskenv">Desktop</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Creating and Extracting compressed files</td>
+    <td class="tg-vn4c" align="right"><a href="software.html#archive">Archived Files</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">File Encryption</td>
+    <td class="tg-031e" align="right"><a href="software.html#encrypt">Encryption</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Installing &amp; Removing Software</td>
+    <td class="tg-vn4c" align="right"><a href="software.html#software">Software</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Installing Software</td>
+    <td class="tg-031e" align="right"><a href="software.html#instsoftware">Installing Software</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Installing Software - From a Deb Package</td>
+    <td class="tg-vn4c" align="right"><a href="software.html#debpkg">Installing Software</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Installing Software - From a Terminal using APT</td>
+    <td class="tg-031e" align="right"><a href="software.html#aptterm">Installing Software</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Installing Software - From Source Code</td>
+    <td class="tg-vn4c" align="right"><a href="software.html#instsource">Installing Software</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Linux Equivalents of Windows Programs</td>
+    <td class="tg-031e" align="right"><a href="software.html#winprogs">Linux Equivalents of Windows Programs</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Lite Software - Change Repository Location</td>
+    <td class="tg-vn4c" align="right"><a href="software.html#literepos">Lite Software</a></td>
+  </tr>	
+  <tr>
+    <td class="tg-031e">Lite Software - Install Software</td>
+    <td class="tg-031e" align="right"><a href="software.html#installsoftware">Lite Software</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Lite Software - Remove Software</td>
+    <td class="tg-vn4c" align="right"><a href="software.html#removesoftware">Lite Software</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Lite Sources</td>
+    <td class="tg-031e" align="right"><a href="software.html#litesources">Repository</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Lite Tweaks</td>
+    <td class="tg-vn4c" align="right"><a href="software.html#tweaks">Tweaks</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">PPA - Adding</td>
+    <td class="tg-031e" align="right"><a href="software.html#ppa">PPA</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">PPA - Removing</td>
+    <td class="tg-vn4c" align="right"><a href="software.html#pparem">PPA</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Software Updates by Country</td>
+    <td class="tg-031e" align="right"><a href="software.html#sources">Repository</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Uninstalling Software</td>
+    <td class="tg-vn4c" align="right"><a href="software.html#uninstsoftware">Uninstalling Software</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Updates</td>
+    <td class="tg-031e" align="right"><a href="software.html#updates">Updates</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Updates Notifications</td>
+    <td class="tg-vn4c" align="right"><a href="software.html#updatesnotify">Updates Notifications</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Wine - Run Windows programs</td>
+    <td class="tg-031e" align="right"><a href="software.html#wine">Windows Software</a></td>
+  </tr>
+</table><br>
+
+					<p><a href="#top">Top of page</a></p>
+
+<h2><a name="hardware">Hardware</a></h2>
+<table class="tg sortable" width=100%>
+  <tr>
+    <td class="tg-vn4c"><a href="#"><img src="images/sort.png"></a></td>
+    <td class="tg-vn4c" align="right"><a href="#"><img src="images/sort.png"></a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Bluetooth - Enabling full support</td>
+    <td class="tg-031e" align="right"><a href="hardware.html#bluetooth">Bluetooth</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Booting Issues</td>
+    <td class="tg-vn4c" align="right"><a href="hardware.html#booting">Booting</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Dual Boot - Multiple Drives</td>
+    <td class="tg-031e" align="right"><a href="hardware.html#install-multi-drive">Booting</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Dual Boot - Modification/Repair</td>
+    <td class="tg-vn4c" align="right"><a href="hardware.html#dualboot">Booting</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Dual Monitor Setup Instructions</td>
+    <td class="tg-031e" align="right"><a href="hardware.html#dualmonitors">Screens</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Finding Help Online</td>
+    <td class="tg-vn4c" align="right"><a href="hardware.html#findhelpon">Support</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Graphics Drivers and Setup</td>
+    <td class="tg-031e" align="right"><a href="hardware.html#graphics">Graphics</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Graphics - AMD Radeon</td>
+    <td class="tg-vn4c" align="right"><a href="hardware.html#radeon">Graphics</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Graphics - NVIDIA</td>
+    <td class="tg-031e" align="right"><a href="hardware.html#nvidia">Graphics</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Graphics - NVIDIA Optimus</td>
+    <td class="tg-vn4c" align="right"><a href="hardware.html#optimus">Graphics</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Hardware Database</td>
+    <td class="tg-031e" align="right"><a href="hardware.html#hwdb">Hardware Database</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">HP Printers on Linux Lite</td>
+    <td class="tg-vn4c" align="right"><a href="hardware.html#hpprinters">Printers</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Installation Issues</td>
+    <td class="tg-031e" align="right"><a href="hardware.html#installissues">Installation Issues</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Keyboard Related</td>
+    <td class="tg-vn4c" align="right"><a href="hardware.html#keyboard">Keyboard</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Lite System Report tool</td>
+    <td class="tg-031e" align="right"><a href="hardware.html#sysreport">Reports</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Printer Setup</td>
+    <td class="tg-vn4c" align="right"><a href="hardware.html#printer">Printers</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Resources for Audio Drivers</td>
+    <td class="tg-031e" align="right"><a href="hardware.html#ressound">Sound</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Resources for compatible Printers</td>
+    <td class="tg-vn4c" align="right"><a href="hardware.html#rescomprint">Printers</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Sound Configuration</td>
+    <td class="tg-031e" align="right"><a href="hardware.html#sound">Sound</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Share your Printer from Linux Lite</td>
+    <td class="tg-vn4c" align="right"><a href="hardware.html#shareprinter">Printers</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Volume Toggles</td>
+    <td class="tg-031e" align="right"><a href="hardware.html#volumetog">Sound</a></td>
+  </tr>
+</table><br>
+
+					<p><a href="#top">Top of page</a></p>
+
+<h2><a name="tutorials">Tutorials</a></h2>
+<table class="tg sortable" width=100%>
+  <tr>
+    <td class="tg-vn4c"><a href="#"><img src="images/sort.png"></a></td>
+    <td class="tg-vn4c" align="right"><a href="#"><img src="images/sort.png"></a></td>
+  </tr>
+
+  <tr>
+    <td class="tg-031e">AntiVirus</td>
+    <td class="tg-031e" align="right"><a href="tutorials.html#antivirus">Security</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">File Search</td>
+    <td class="tg-vn4c" align="right"><a href="tutorials.html#filesearch">File Search</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">FireWall</td>
+    <td class="tg-031e" align="right"><a href="tutorials.html#firewall">Security</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Timeshift - a System Restore utility</td>
+    <td class="tg-vn4c" align="right"><a href="tutorials.html#Timeshift">Backup</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Timeshift - Creating a restore Point</td>
+    <td class="tg-031e" align="right"><a href="tutorials.html#Timeshiftcreate">Backup</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Timeshift - Restoring a backup</td>
+    <td class="tg-vn4c" align="right"><a href="tutorials.html#Timeshiftrestore">Backup</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">USB Persistence</td>
+    <td class="tg-031e" align="right"><a href="tutorials.html#usbpers">USB Persistence</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">VirtualBox</td>
+    <td class="tg-vn4c" align="right"><a href="tutorials.html#vbox">Virtual Machines</a></td>
+  </tr>
+</table><br>
+
+					<p><a href="#top">Top of page</a></p>
+
+<h2><a name="customize">Customize</a></h2>
+<table class="tg sortable" width=100%>
+  <tr>
+    <td class="tg-vn4c"><a href="#"><img src="images/sort.png"></a></td>
+    <td class="tg-vn4c" align="right"><a href="#"><img src="images/sort.png"></a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Applying a new Icon set</td>
+    <td class="tg-031e" align="right"><a href="customize.html#apply_icon">Icons</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Applying a new Mouse theme</td>
+    <td class="tg-vn4c" align="right"><a href="customize.html#mouse_theme">Mouse</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Applying a new Theme</td>
+    <td class="tg-031e" align="right"><a href="customize.html#apply_theme">Themes</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Customizing Linux Lite</td>
+    <td class="tg-vn4c" align="right"><a href="customize.html#custll">Customizing</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Customize your Panel Bar</td>
+    <td class="tg-031e" align="right"><a href="customize.html#panel">Panel</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Desktop Settings basics</td>
+    <td class="tg-vn4c" align="right"><a href="customize.html#desktop">Desktop</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Lite Desktop Widget</td>
+    <td class="tg-031e" align="right"><a href="customize.html#litewidget">Desktop</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Themes &amp; Icon sets</td>
+    <td class="tg-vn4c" align="right"><a href="customize.html#themes">Themes</a></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Window Manager Tweaks</td>
+    <td class="tg-031e" align="right"><a href="customize.html#tweaks">Tweaks</a></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">Workspace Settings</td>
+    <td class="tg-vn4c" align="right"><a href="customize.html#workspaces">Workspace</a></td>
+  </tr>
+</table><br>
+
+					<p><a href="#top">Top of page</a></p>
+
+<h2><a name="glossary">Glossary</a></h2>
+<table class="tg" width=100%>
+  <tr>
+    <td class="tg-031e">Glossary</td>
+    <td class="tg-031e" align="right"><a href="glossary.html">Click here</a></td>
+  </tr>
+</table><br>
+
+					<p><a href="#top">Top of page</a></p>
+				</div>
+				<div class="clear"> </div>
+			</div>
+		</div>
+		<div class="clear"> </div>
+	</div>
+</body>
+</html>

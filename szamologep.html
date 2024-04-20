@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Számológép</title>
+  <a href="./">index</a>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		h1 {
+			margin-top: 50px;
+		}
+
+		input[type="button"] {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			cursor: pointer;
+			font-size: 20px;
+			margin: 5px;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 5px;
+		}
+
+		input[type="text"] {
+			background-color: #fff;
+			border: none;
+			font-size: 20px;
+			margin: 5px;
+			padding: 10px 20px;
+			text-align: right;
+			width: 200px;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Számológép</h1>
+	<input type="text" id="result" disabled><br>
+	<input type="button" value="7" onclick="insert('7')">
+	<input type="button" value="8" onclick="insert('8')">
+	<input type="button" value="9" onclick="insert('9')">
+	<input type="button" value="+" onclick="insert('+')"><br>
+	<input type="button" value="4" onclick="insert('4')">
+	<input type="button" value="5" onclick="insert('5')">
+	<input type="button" value="6" onclick="insert('6')">
+	<input type="button" value="-" onclick="insert('-')"><br>
+	<input type="button" value="1" onclick="insert('1')">
+	<input type="button" value="2" onclick="insert('2')">
+	<input type="button" value="3" onclick="insert('3')">
+	<input type="button" value="*" onclick="insert('*')"><br>
+	<input type="button" value="0" onclick="insert('0')">
+	<input type="button" value="." onclick="insert('.')">
+	<input type="button" value="C" onclick="clearResult()">
+	<input type="button" value="/" onclick="insert('/')"><br>
+	<input type="button" value="=" onclick="calculate()">
+	
+	<script>
+		function insert(value) {
+			document.getElementById("result").value += value;
+		}
+
+		function clearResult() {
+			document.getElementById("result").value = "";
+		}
+
+		function calculate() {
+			let result = eval(document.getElementById("result").value);
+			document.getElementById("result").value = result;
+		}
+	</script>
+</body>
+</html>

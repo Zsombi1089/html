@@ -1,0 +1,218 @@
+<html>
+ <!-- whatchu lookin at?-->
+ <!-- author: ksami -->
+ <!-- site: github.com/ksami -->
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"> 
+  <title>MorseTap</title> 
+  <style type="text/css">
+      input {
+        width: 50px;
+      }
+      textarea {
+        width: 100%;
+      }
+      .section {
+        margin-top: 30px;
+        width: 100%;
+      }
+      .box {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      #footer {
+        text-align: right;
+      }
+      #tapbutton {
+        font-size: 36pt;
+        width: 100%;
+      }
+    </style> 
+ </head> 
+ <body> 
+  <h1>Morse Code Tapping Translator</h1> 
+   <a href="./">index</a>
+  <div class="section"> 
+   <div class="box">
+     Tap the TAP button for "dot", tap and hold for "dash", pause for a break in character, longer pause for word. 
+    <br>
+    <br> Durations can be configured below. 
+    <br>
+    <br> Website optimized for anything except humans. 
+   </div> 
+  </div> 
+  <div class="section"> 
+   <div class="box"> 
+    <label> <b>Input</b> <textarea rows="5" id="inputTextbox"></textarea> </label> 
+   </div> 
+   <div class="box"> 
+    <button onmousedown="handlerMouseDown()" onmouseup="handlerMouseUp()" ontouchstart="handlerMouseDown(event)" ontouchend="handlerMouseUp(event)" id="tapbutton">TAP</button> 
+   </div> 
+  </div> 
+  <div class="section"> 
+   <div class="box"> 
+    <label> <b>Output</b> <textarea rows="5" id="outputTextbox"></textarea> </label> 
+   </div> 
+   <div class="box"> 
+    <button onclick="handlerParse()">Translate</button> 
+   </div> 
+  </div> 
+  <div class="section"> 
+   <div class="box"> 
+    <div> 
+     <label> Is "dash" after holding for: <input type="text" id="durationDash"> ms </label> 
+    </div> 
+    <div> 
+     <label> Separate as character after: <input type="text" id="durationPauseChar"> ms </label> 
+    </div> 
+    <div> 
+     <label> Separate as word after: <input type="text" id="durationPauseWord"> ms </label> 
+    </div> 
+   </div> 
+   <div class="box"> 
+    <button onclick="handlerSetDurations()">Apply</button> 
+   </div> 
+  </div> 
+  <div class="section"> 
+   <div id="footer"> 
+    <script type="text/javascript">var sc_project=11085903,sc_invisible=0,sc_security="e94f2246",scJsHost=(("https:"==document.location.protocol)?"https://secure.":"http://www.");document.write("<sc"+"ript type='text/javascript' src='"+scJsHost+"statcounter.com/counter/counter.js'></"+"script>");</script> 
+    <noscript>
+     <div>
+      <a title="statcounter" href="http://statcounter.com/"><img class="statcounter" src="//c.statcounter.com/11085903/0/e94f2246/0/" alt="statcounter"></a>
+     </div>
+    </noscript> 
+    <p>ksami - 2016</p> 
+   </div> 
+  </div>  
+  <script type="text/javascript">
+    var MORSE_MAP = {"-----":"0",".----":"1","..---":"2","...--":"3","....-":"4",".....":"5","-....":"6","--...":"7","---..":"8","----.":"9",".-":"a","-...":"b","-.-.":"c","-..":"d",".":"e","..-.":"f","--.":"g","....":"h","..":"i",".---":"j","-.-":"k",".-..":"l","--":"m","-.":"n","---":"o",".--.":"p","--.-":"q",".-.":"r","...":"s","-":"t","..-":"u","...-":"v",".--":"w","-..-":"x","-.--":"y","--..":"z",".-.-.-":".","--..--":",","..--..":"?","-.-.--":"!","-....-":"-","-..-.":"/",".--.-.":"@","-.--.":"(","-.--.-":")"};
+    var CHAR_DOT = ".";
+    var CHAR_DASH = "-";
+    var CHAR_UNDEFINED = "#";
+    var SEP_CHAR = " ";
+    var SEP_WORD = "/ ";
+
+    var durationDash = 200;  //ms
+    var durationPauseChar = 350;  //ms
+    var durationPauseWord = 1000;  //ms
+    var timeLastMouseUp;
+    var timeMouseDown;
+    var timeMouseUp;
+
+    var timerCharPause;
+    var timerWordPause;
+    
+    var domInputTextbox;
+    var domDurationDash;
+    var domDurationPauseChar;
+    var domDurationPauseWord;
+
+
+    (function() {
+      console.log("whatchu lookin at?");
+
+      domInputTextbox = document.getElementById("inputTextbox");
+      domOutputTextbox = document.getElementById("outputTextbox");
+      domDurationDash = document.getElementById("durationDash");
+      domDurationPauseChar = document.getElementById("durationPauseChar");
+      domDurationPauseWord = document.getElementById("durationPauseWord");
+ 
+      domDurationDash.value = durationDash;
+      domDurationPauseChar.value = durationPauseChar;
+      domDurationPauseWord.value = durationPauseWord;
+    })();
+
+
+    function handlerMouseDown(e) {
+      if(e) {
+        e.preventDefault();
+      }
+      timeMouseDown = Date.now();
+
+      clearTimeout(timerCharPause);
+      clearTimeout(timerWordPause);
+    }
+    function handlerMouseUp(e) {
+      if(e) {
+        e.preventDefault();
+      }
+      timeMouseUp = Date.now();
+      timeLastMouseUp = timeMouseUp;
+
+      var timeClick = timeMouseUp - timeMouseDown;
+      
+      if(timeClick < durationDash) {
+        domInputTextbox.value += CHAR_DOT;
+      } else {
+        domInputTextbox.value += CHAR_DASH;
+      }
+
+      timerCharPause = setTimeout(handlerTimeoutChar, durationPauseChar);
+      timerWordPause = setTimeout(handlerTimeoutWord, durationPauseWord);
+    }
+    function handlerSetDurations() {
+      var numDurationDash = parseInt(domDurationDash.value);
+      var numDurationPauseChar = parseInt(domDurationPauseChar.value);
+      var numDurationPauseWord = parseInt(domDurationPauseWord.value);
+
+      if(!isNaN(numDurationDash) && !isNaN(numDurationPauseChar) && !isNaN(numDurationPauseWord)) {
+        durationDash = numDurationDash;
+        durationPauseChar = numDurationPauseChar;
+        durationPauseWord = numDurationPauseWord;
+      } else {
+        domDurationDash.value = durationDash;
+        domDurationPauseChar.value = durationPauseChar;
+        domDurationPauseWord.value = durationPauseWord;
+      }
+    }
+    function handlerTimeoutChar() {
+      domInputTextbox.value += SEP_CHAR;
+    }
+    function handlerTimeoutWord() {
+      domInputTextbox.value += SEP_WORD;
+    }
+    function handlerParse() {
+      domOutputTextbox.value = parse(domInputTextbox.value);
+    }
+
+
+    function average(arr) {
+      if(arr.length === 0) {
+        return undefined;
+      }
+      var acc = arr[0];
+      for(var k=0; k<arr.length; k++) {
+        acc += arr[k];
+      }
+      return acc/arr.length;
+    }
+    function parse(str) {
+      if(str.length === 0) {
+        return "";
+      }
+
+      var result = "";
+      var words = str.split(SEP_CHAR + SEP_WORD);
+      
+      for(var i=0; i<words.length; i++) {
+        var chars = words[i].split(SEP_CHAR);
+
+        for(var j=0; j<chars.length; j++) {
+          if(chars[j] === "") {
+            continue;
+          }
+
+          var char = MORSE_MAP[chars[j]];
+          if(char === undefined) {
+            result += CHAR_UNDEFINED;
+          } else {
+            result += char;
+          }
+        }
+        result += SEP_CHAR;
+      }
+      return result;
+    }
+  </script>  
+ </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <style>
+        #chatContainer {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        #chatMessages {
+            display: flex;
+            flex-direction: column-reverse;
+			
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var username = '';
+
+            // Felhaszn�l�n�v be�ll�t�sa az IP-c�mre
+            $.getJSON('https://api.ipify.org?format=json', function(data) {
+                username = data.ip;
+            });
+
+            // �j �zenet k�ld�se
+            $('#chatForm').submit(function(e) {
+                e.preventDefault();
+                var message = $('#messageInput').val();
+                var data = {
+                    message: message,
+                    username: username
+                };
+                $.post('send_message.php', data, function(response) {
+                    // �zenet elk�ld�se ut�n a chat friss�t�se
+                    refreshChat();
+                    $('#messageInput').val('');
+                });
+            });
+
+            // Chat friss�t�se
+            function refreshChat() {
+                $.get('get_messages.php', function(response) {
+                    $('#chatMessages').html(response);
+                    // Chat automatikus g�rget�se az alj�ra
+                    $('#chatContainer').scrollTop($('#chatMessages')[0].scrollHeight);
+                });
+            }
+
+            // Chat automatikus friss�t�se m�sodpercenk�nt
+            setInterval(refreshChat, 1000);
+
+            // Chat friss�t�se az oldal bet�lt�se ut�n
+            refreshChat();
+        });
+        function saveVisitorData() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log("Mentve.");
+                }
+            };
+            xhttp.open("GET", "", true);
+            xhttp.send();
+        }
+    </script>
+</head>
+<body onload="saveVisitorData()">
+    <h1>Chat</h1><a href="./">index</a>
+    <form id="chatForm">
+        <input type="text" id="messageInput" placeholder="Uzenet" required>
+        <button type="submit">Kuldes</button>
+    </form>
+    <div id="chatContainer">
+        <div id="chatMessages"></div>
+    </div>
+</body>
+</html>
